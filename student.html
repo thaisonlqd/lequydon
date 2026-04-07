@@ -201,6 +201,31 @@
             .action-bar-modal { display: none !important; }
             #report-content { box-shadow: none; border: none; padding: 0; min-height: auto; width: 100%; }
         }
+
+        /* ---------------------------------------------------
+           PHẦN 4: MODAL BẮT BUỘC ĐỔI MẬT KHẨU
+           --------------------------------------------------- */
+        #forceChangePassModal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            display: none; justify-content: center; align-items: center;
+            z-index: 99999; backdrop-filter: blur(8px);
+        }
+        .modal-pass-content {
+            background: white; width: 380px; padding: 30px; text-align: center;
+            border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s ease;
+        }
+        .modal-pass-content input {
+            width: 100%; padding: 14px; margin-bottom: 15px; border: 1px solid #cbd5e1;
+            border-radius: 8px; box-sizing: border-box; font-size: 15px; outline: none;
+        }
+        .modal-pass-content input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        .btn-update-pass {
+            width: 100%; padding: 14px; background: var(--primary); color: white; border: none;
+            border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.2s; font-size: 15px; text-transform: uppercase;
+        }
+        .btn-update-pass:hover { background: var(--primary-hover); transform: translateY(-2px); }
     </style>
 </head>
 <body>
@@ -231,7 +256,7 @@
 
         <div class="button-group">
             <button class="btn btn-start" onclick="startExam()">
-                <i class="fa-solid fa-pen-nib"></i> BẮT ĐẦU
+                <i class="fa-solid fa-pen-nib"></i> BẮT ĐẦU LÀM BÀI
             </button>
             <button class="btn btn-view" id="btnToggleScore" onclick="toggleScoreView()">
                 <i class="fa-solid fa-chart-line"></i> XEM ĐIỂM
@@ -278,7 +303,7 @@
             <div id="report-content">
                 <div class="report-header-top">
                     <div class="report-header-left"><p>TRƯỜNG: <span id="lbl-school">---</span></p><p>Tổ: Khoa học tự nhiên</p></div>
-                    <div class="report-header-right"><p>ĐỀ ÔN TỰ LUYỆN CUỐI KỲ</p><p>Năm học: <span id="lbl-year">2023 - 2024</span></p><p>Môn: <span id="lbl-subject">Tin học</span></p></div>
+                    <div class="report-header-right"><p>ĐỀ ÔN TỰ LUYỆN CUỐI KỲ</p><p>Năm học: <span id="lbl-year">2025 - 2026</span></p><p>Môn: <span id="lbl-subject">Tin học</span></p></div>
                 </div>
                 <div class="report-student-info">
                     <p>Họ và tên thí sinh: <b id="lbl-name"></b></p>
@@ -312,16 +337,37 @@
         </div>
     </div>
 
+    <div id="forceChangePassModal">
+        <div class="modal-pass-content">
+            <i class="fa-solid fa-shield-halved" style="font-size: 55px; color: #f59e0b; margin-bottom: 15px;"></i>
+            <h3 style="margin-top: 0; color: #1e293b; text-transform: uppercase;">Bảo Mật Tài Khoản</h3>
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 25px; line-height: 1.5;">
+                Đây là lần đăng nhập đầu tiên của em.<br>Vui lòng thay đổi <b>mật khẩu mặc định</b> để bảo vệ tài khoản và tiếp tục sử dụng hệ thống!
+            </p>
+            
+            <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới">
+            <input type="password" id="confirmNewPassword" placeholder="Nhập lại mật khẩu mới">
+            
+            <p id="changePassError" style="color: #ef4444; font-size: 13px; margin-top: -5px; margin-bottom: 15px; display: none; font-weight: bold;"></p>
+
+            <button id="btnConfirmChangePass" class="btn-update-pass" onclick="submitNewPassword()">
+                CẬP NHẬT MẬT KHẨU
+            </button>
+        </div>
+    </div>
+
     <script>
         let studentRecords = [];
         let currentModalIndex = 0; 
         let isDataLoaded = false; 
 
-        // Khởi tạo trang
+        // ===============================================
+        // KHỞI TẠO TRANG VÀ KIỂM TRA MẬT KHẨU
+        // ===============================================
         window.onload = function() {
             const role = sessionStorage.getItem('user_role');
             if (role !== 'student') {
-                alert("Vui lòng đăng nhập!");
+                alert("Vui lòng đăng nhập để tiếp tục!");
                 window.location.href = "index.html"; return;
             }
 
@@ -329,14 +375,20 @@
             const className = sessionStorage.getItem('exam_class');
             const grade = sessionStorage.getItem('exam_grade');
             const schoolName = sessionStorage.getItem('exam_school') || (typeof CONFIG !== 'undefined' ? CONFIG.SCHOOL_NAME : "Chưa xác định");
+            const currentPass = sessionStorage.getItem('user_pass');
 
+            // 1. Kiểm tra nếu mật khẩu hiện tại TRÙNG với mật khẩu mặc định (USER_PASS) trong config
+            if (typeof CONFIG !== 'undefined' && currentPass === CONFIG.USER_PASS) {
+                // Hiển thị modal ép buộc đổi mật khẩu
+                document.getElementById('forceChangePassModal').style.display = 'flex';
+            }
+
+            // 2. Điền thông tin HS vào Giao diện Dashboard
             let shortName = fullName;
             if (fullName) {
                 const nameParts = fullName.split(' ');
                 shortName = nameParts[nameParts.length - 1];
             }
-
-            // Gắn dữ liệu vào Giao diện
             document.getElementById('welcomeName').innerText = shortName;
             document.getElementById('studentName').innerText = fullName;
             document.getElementById('studentClass').innerText = className;
@@ -344,6 +396,66 @@
             document.getElementById('studentSchool').innerText = schoolName.toUpperCase();
         };
 
+        // ===============================================
+        // HÀM XỬ LÝ ĐỔI MẬT KHẨU (GỌI LÊN GOOGLE SCRIPT)
+        // ===============================================
+        function submitNewPassword() {
+            const newPass = document.getElementById('newPassword').value;
+            const confirmPass = document.getElementById('confirmNewPassword').value;
+            const errorMsg = document.getElementById('changePassError');
+            const btn = document.getElementById('btnConfirmChangePass');
+
+            if (newPass.length < 6) {
+                errorMsg.innerText = "Mật khẩu phải có ít nhất 6 ký tự!";
+                errorMsg.style.display = 'block'; return;
+            }
+            if (newPass !== confirmPass) {
+                errorMsg.innerText = "Mật khẩu nhập lại không khớp!";
+                errorMsg.style.display = 'block'; return;
+            }
+
+            errorMsg.style.display = 'none';
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang xử lý...';
+            btn.disabled = true;
+
+            const fullName = sessionStorage.getItem('exam_name');
+            const className = sessionStorage.getItem('exam_class');
+            const loginUsername = sessionStorage.getItem('login_username') || fullName; // Dùng Tên đăng nhập đã lưu từ index.html
+
+            // Gửi action "changePassword" lên Apps Script
+            const payload = {
+                action: "changePassword",
+                name: fullName,
+                className: className,
+                username: loginUsername,
+                newPass: newPass
+            };
+
+            fetch(CONFIG.GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "text/plain;charset=utf-8" },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                // Cập nhật pass mới vào session để những lần load trang sau không bị hỏi lại
+                sessionStorage.setItem('user_pass', newPass); 
+                
+                // Đóng modal và cho phép sử dụng
+                document.getElementById('forceChangePassModal').style.display = 'none';
+                alert("Đổi mật khẩu thành công! Em có thể bắt đầu sử dụng hệ thống.");
+                btn.innerHTML = 'CẬP NHẬT MẬT KHẨU';
+                btn.disabled = false;
+            }).catch(err => {
+                errorMsg.innerText = "Lỗi kết nối mạng! Vui lòng thử lại.";
+                errorMsg.style.display = 'block';
+                btn.innerHTML = 'CẬP NHẬT MẬT KHẨU';
+                btn.disabled = false;
+            });
+        }
+
+        // ===============================================
+        // CÁC HÀM CƠ BẢN
+        // ===============================================
         function startExam() {
             const grade = sessionStorage.getItem('exam_grade');
             if (grade) { window.location.href = `tin${grade}.html`; } 
@@ -468,7 +580,7 @@
         }
 
         // ===============================================
-        // MỞ MODAL XEM CHI TIẾT VÀ GIẢI MÃ
+        // MỞ MODAL XEM CHI TIẾT VÀ GIẢI MÃ BÀI LÀM
         // ===============================================
         function viewExamDetail(index) {
             currentModalIndex = index;
