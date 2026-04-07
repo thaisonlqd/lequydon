@@ -7,7 +7,8 @@ const CONFIG = {
     
     // Mật khẩu đăng nhập dành cho giáo viên
     ADMIN_PASS: "123456",
-    
+    // Mật khẩu đăng nhập dành cho Hoc sinh
+    USER_PASS: "123456",
     // Năm học hiển thị
     SCHOOL_YEAR: "2025-2026",
     
