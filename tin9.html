@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đề ôn tự luyện - Tin học 9</title>
+    <title>Đề kiểm tra cuối học kỳ II - Tin học 9</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="config.js"></script>
 
@@ -48,6 +48,12 @@
         .tf-table .tf-text { text-align: left; font-size: 15px; }
         .tf-radio { transform: scale(1.3); cursor: pointer; }
         
+        /* Sub-table for reference data */
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; font-size: 14px; background: #fff;}
+        .data-table th, .data-table td { border: 1px solid #94a3b8; padding: 8px; text-align: center; }
+        .data-table th { background: #e2e8f0; font-weight: bold; }
+        .data-table td:nth-child(2), .data-table td:nth-child(3), .data-table td:nth-child(5) { text-align: left; }
+
         .rte-container { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
         .rte-toolbar { background: #f1f5f9; padding: 8px; border-bottom: 1px solid var(--border); display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
         .rte-btn { background: white; border: 1px solid var(--border); padding: 6px 10px; border-radius: 4px; cursor: pointer; color: var(--text-main); font-size: 14px; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px;}
@@ -138,12 +144,12 @@
                     </div>
                 </div>
                 <div class="classic-right">
-                    <div class="exam-title">ĐỀ ÔN TẬP TỰ LUYỆN</div>
+                    <div class="exam-title">ĐỀ KIỂM TRA CUỐI HỌC KỲ II<br>NĂM HỌC 2025-2026</div>
                     <div class="exam-subject">MÔN: <span style="color: var(--primary);">TIN HỌC 9</span></div>
                 </div>
             </div>
             <div class="classic-header-bottom">
-                Thời gian làm bài: 45 phút (không kể thời gian giao đề)
+                Thời gian làm bài: 30 phút (Không kể thời gian giao đề)
             </div>
         </div>
 
@@ -153,7 +159,7 @@
     <div class="exam-sidebar">
         <div class="sidebar-box">
             <div class="timer-title">Thời gian làm bài</div>
-            <div class="timer-display" id="timer">45:00</div>
+            <div class="timer-display" id="timer">30:00</div>
         </div>
 
         <div class="sidebar-box">
@@ -185,155 +191,79 @@
 
 <script>
     // ==========================================
-    // 1. NGÂN HÀNG CÂU HỎI (TIN HỌC 9 - KNTT)
-    // SỐ LƯỢNG: GẤP 3 LẦN MA TRẬN
+    // 1. NGÂN HÀNG CÂU HỎI (Cập nhật theo Đề kiểm tra cuối HK 2 - Tin 9)
     // ==========================================
     
-    // --- NGÂN HÀNG MCQ (36 CÂU) ---
+    // --- NGÂN HÀNG MCQ (16 CÂU) ---
     const allMcqBank = [
-        // BÀI 10a: SỬ DỤNG HÀM COUNTIF (9 câu)
-        { lesson: "10a", q: "Chức năng của hàm COUNTIF trong bảng tính Excel là gì?", options: ["Tính tổng các giá trị trong một vùng", "Đếm số lượng các ô thỏa mãn một điều kiện cho trước", "Tìm giá trị lớn nhất trong bảng", "Đếm tất cả các ô có chứa dữ liệu"], correct: 1, cols: 1 },
-        { lesson: "10a", q: "Cú pháp đúng của hàm COUNTIF là gì?", options: ["=COUNTIF(criteria, range)", "=COUNTIF(range; criteria; sum_range)", "=COUNTIF(range, criteria)", "=COUNT(range, criteria)"], correct: 2, cols: 2 },
-        { lesson: "10a", q: "Trong hàm COUNTIF, tham số 'range' có ý nghĩa gì?", options: ["Là điều kiện để đếm", "Là vùng dữ liệu cần đếm", "Là giá trị trả về nếu điều kiện sai", "Là vùng cần tính tổng"], correct: 1, cols: 2 },
-        { lesson: "10a", q: "Khi nhập điều kiện là kí tự chữ (văn bản) hoặc biểu thức so sánh (>, <) trong hàm COUNTIF, ta phải đặt điều kiện đó trong dấu gì?", options: ["Ngoặc đơn ( )", "Ngoặc vuông [ ]", "Ngoặc kép \" \"", "Không cần dấu gì"], correct: 2, cols: 1 },
-        { lesson: "10a", q: "Hàm =COUNTIF(C2:C10, \">5000\") thực hiện việc gì?", options: ["Tính tổng các ô từ C2 đến C10 lớn hơn 5000", "Đếm số ô trong vùng C2:C10 có giá trị lớn hơn 5000", "Hiển thị chữ \">5000\" ra màn hình", "Lỗi cú pháp"], correct: 1, cols: 1 },
-        { lesson: "10a", q: "Để đếm số lần xuất hiện của mục 'Ăn uống' trong vùng dữ liệu từ B2 đến B20, công thức nào sau đây đúng?", options: ["=COUNT(B2:B20, \"Ăn uống\")", "=COUNTIF(B2:B20, Ăn uống)", "=COUNTIF(B2:B20, \"Ăn uống\")", "=SUMIF(B2:B20, \"Ăn uống\")"], correct: 2, cols: 1 },
-        { lesson: "10a", q: "Khi nhập công thức Excel, nếu thấy xuất hiện lỗi #NAME? thì nguyên nhân thường do đâu?", options: ["Vùng dữ liệu quá rộng", "Nhập sai tên hàm (ví dụ gõ thành COUTIF)", "Điều kiện không có trong bảng", "Chưa lưu tệp"], correct: 1, cols: 1 },
-        { lesson: "10a", q: "Tham số 'criteria' trong hàm COUNTIF dùng để làm gì?", options: ["Chỉ định vùng cần đếm", "Tính trung bình cộng", "Khai báo điều kiện để đếm", "Định dạng màu sắc cho ô"], correct: 2, cols: 2 },
-        { lesson: "10a", q: "Kết quả trả về của hàm COUNTIF là một dữ liệu kiểu gì?", options: ["Kiểu chữ (văn bản)", "Kiểu số nguyên (số lượng ô)", "Kiểu ngày tháng", "Lỗi"], correct: 1, cols: 2 },
-
-        // BÀI 11a: SỬ DỤNG HÀM SUMIF (9 câu)
-        { lesson: "11a", q: "Chức năng của hàm SUMIF trong Excel là gì?", options: ["Đếm số ô thỏa mãn điều kiện", "Tính tổng các ô trong một vùng thỏa mãn một điều kiện cho trước", "Tính trung bình cộng", "Nối các chuỗi kí tự lại với nhau"], correct: 1, cols: 1 },
-        { lesson: "11a", q: "Cú pháp đúng của hàm SUMIF là gì?", options: ["=SUMIF(range, criteria, [sum_range])", "=SUMIF(criteria, range, sum_range)", "=SUMIF(sum_range, criteria)", "=SUMIF([sum_range], range, criteria)"], correct: 0, cols: 1 },
-        { lesson: "11a", q: "Trong hàm SUMIF, tham số [sum_range] mang ý nghĩa gì?", options: ["Vùng chứa điều kiện", "Vùng thực tế cần tính tổng", "Điều kiện tính tổng", "Là tham số luôn luôn bắt buộc phải nhập"], correct: 1, cols: 1 },
-        { lesson: "11a", q: "Nếu bỏ qua tham số [sum_range] trong hàm SUMIF, phần mềm sẽ tính tổng dựa trên vùng nào?", options: ["Báo lỗi công thức", "Tự động tính tổng toàn bộ bảng", "Tính tổng ngay trên vùng điều kiện (range)", "Trả về giá trị 0"], correct: 2, cols: 1 },
-        { lesson: "11a", q: "Để tính tổng số tiền chi cho mục 'Giải trí' (tên mục ở cột B, số tiền ở cột C), công thức nào đúng?", options: ["=SUMIF(B2:B10, \"Giải trí\", C2:C10)", "=SUMIF(C2:C10, \"Giải trí\", B2:B10)", "=COUNTIF(B2:B10, \"Giải trí\")", "=SUMIF(\"Giải trí\", B2:B10, C2:C10)"], correct: 0, cols: 1 },
-        { lesson: "11a", q: "Sự khác biệt cơ bản giữa COUNTIF và SUMIF là gì?", options: ["COUNTIF dùng để tính tổng, SUMIF dùng để đếm", "COUNTIF dùng để đếm, SUMIF dùng để tính tổng", "Cả hai đều dùng để tính tổng nhưng SUMIF tính nhanh hơn", "COUNTIF chỉ dùng cho chữ, SUMIF chỉ dùng cho số"], correct: 1, cols: 1 },
-        { lesson: "11a", q: "Lỗi #VALUE! khi sử dụng hàm SUMIF thường xảy ra khi nào?", options: ["Gõ sai tên hàm", "Điều kiện không được đặt trong dấu ngoặc kép", "Vùng range và vùng sum_range có kích thước không tương xứng hoặc chứa dữ liệu lỗi", "Bảng không có đường viền"], correct: 2, cols: 1 },
-        { lesson: "11a", q: "Tên hàm SUMIF là sự kết hợp của hai từ tiếng Anh nào?", options: ["Sub và If", "Sum và If (Tổng và Nếu)", "Sort và If", "Save và If"], correct: 1, cols: 2 },
-        { lesson: "11a", q: "Trong bảng quản lý thu chi, nếu muốn tính tổng toàn bộ các khoản đã chi từ 500.000 trở lên tại cột C, công thức là?", options: ["=SUMIF(C2:C20, \">500000\")", "=COUNTIF(C2:C20, \">500000\")", "=SUM(C2:C20)", "=SUMIF(C2:C20, >500000)"], correct: 0, cols: 1 },
-
-        // BÀI 12a: SỬ DỤNG HÀM IF (9 câu)
-        { lesson: "12a", q: "Chức năng của hàm IF trong Excel là gì?", options: ["Trích xuất kí tự từ chuỗi", "Kiểm tra một điều kiện và trả về một giá trị nếu điều kiện đúng, giá trị khác nếu sai", "Đếm các ô trống", "Tính tổng các ô"], correct: 1, cols: 1 },
-        { lesson: "12a", q: "Cú pháp đúng của hàm IF là gì?", options: ["=IF(value_if_true, value_if_false, logical_test)", "=IF(logical_test; value_if_true)", "=IF(logical_test, value_if_true, value_if_false)", "=IF(value, condition)"], correct: 2, cols: 1 },
-        { lesson: "12a", q: "Trong hàm IF, tham số 'logical_test' đóng vai trò gì?", options: ["Là giá trị đúng", "Là giá trị sai", "Là vùng cần tính tổng", "Là biểu thức điều kiện cần kiểm tra"], correct: 3, cols: 1 },
-        { lesson: "12a", q: "Trong Excel, phép so sánh 'khác nhau' (không bằng) được kí hiệu như thế nào?", options: ["!=", "<>", "><", "NOT="], correct: 1, cols: 2 },
-        { lesson: "12a", q: "Phép so sánh 'lớn hơn hoặc bằng' trong biểu thức điều kiện được viết là?", options: ["=>", ">>", ">=", "=<"], correct: 2, cols: 2 },
-        { lesson: "12a", q: "Kết quả của công thức =IF(10>5, \"Giỏi\", \"Khá\") là gì?", options: ["Khá", "Giỏi", "10", "5"], correct: 1, cols: 2 },
-        { lesson: "12a", q: "Kết quả của công thức =IF(3>=5, 1, 0) là gì?", options: ["1", "0", "Đúng", "Sai"], correct: 1, cols: 2 },
-        { lesson: "12a", q: "Hàm IF lồng nhau (Nested IF) được hiểu là gì?", options: ["Sử dụng hàm SUM bên trong hàm IF", "Sử dụng một hàm IF khác thay thế cho tham số value_if_true hoặc value_if_false", "Ghép 2 bảng tính lại với nhau", "Đếm số ô có chứa chữ IF"], correct: 1, cols: 1 },
-        { lesson: "12a", q: "Đâu là một biểu thức điều kiện hợp lệ để dùng làm tham số 'logical_test'?", options: ["B2 > 5000", "\"Tốt\"", "=SUM(A1:A5)", "B2 + C2"], correct: 0, cols: 2 },
-
-        // BÀI 13a: HOÀN THIỆN BẢNG TÍNH QUẢN LÝ TÀI CHÍNH (9 câu)
-        { lesson: "13a", q: "Trong bảng tổng hợp thu chi, chỉ số NET (Số dư) được hiểu là gì?", options: ["Tổng số tiền thu nhập", "Tổng số tiền đã chi tiêu", "Phần tiền còn lại (Tổng thu nhập trừ đi Tổng chi tiêu)", "Tiền nợ ngân hàng"], correct: 2, cols: 1 },
-        { lesson: "13a", q: "Theo quy tắc tài chính 50-30-20, mức 50% thu nhập nên được phân bổ cho khoản nào?", options: ["Tiết kiệm và đầu tư", "Chi tiêu cho nhu cầu thiết yếu (ăn uống, nhà ở...)", "Chi tiêu cho mong muốn cá nhân (giải trí, mua sắm...)", "Trả nợ"], correct: 1, cols: 1 },
-        { lesson: "13a", q: "Theo quy tắc tài chính 50-30-20, mức 20% thu nhập được khuyên dùng cho việc gì?", options: ["Nhu cầu thiết yếu", "Giải trí", "Tiết kiệm, dự phòng và đầu tư", "Du lịch"], correct: 2, cols: 1 },
-        { lesson: "13a", q: "Công thức cơ bản để tính Số dư (NET) cuối tháng là?", options: ["NET = Tổng chi - Tổng thu", "NET = Tổng thu + Tổng chi", "NET = Tổng thu * Tổng chi", "NET = Tổng thu - Tổng chi"], correct: 3, cols: 1 },
-        { lesson: "13a", q: "Việc liên kết dữ liệu giữa trang tính (Sheet) Chi tiêu sang trang tính Tổng hợp mang lại lợi ích gì?", options: ["Giúp bảng tính có màu sắc đẹp hơn", "Khi dữ liệu bên trang Chi tiêu thay đổi, trang Tổng hợp sẽ tự động cập nhật kết quả", "Làm cho tệp Excel không thể bị copy", "Không có lợi ích gì"], correct: 1, cols: 1 },
-        { lesson: "13a", q: "Nếu Số dư (NET) mang giá trị âm (< 0), điều đó phản ánh tình trạng tài chính như thế nào?", options: ["Đang có nhiều tiền tiết kiệm", "Thu nhập đang lớn hơn chi tiêu", "Chi tiêu vượt quá thu nhập (Thâm hụt)", "Đạt chuẩn quy tắc 50-30-20"], correct: 2, cols: 1 },
-        { lesson: "13a", q: "Cú pháp để lấy dữ liệu từ ô B5 của trang tính có tên 'Chi_tieu' là gì?", options: ["Chi_tieu!B5", "Chi_tieu.B5", "Chi_tieu:B5", "[Chi_tieu]B5"], correct: 0, cols: 2 },
-        { lesson: "13a", q: "Theo quy tắc 50-30-20, mức 30% thu nhập được phân bổ cho khoản nào?", options: ["Nhu cầu thiết yếu", "Mong muốn cá nhân (mua sắm linh tinh, giải trí)", "Tiết kiệm", "Đóng học phí cố định"], correct: 1, cols: 1 },
-        { lesson: "13a", q: "Việc sử dụng Excel để quản lý tài chính gia đình giúp ích gì cho chúng ta?", options: ["Tự động kiếm ra tiền", "Theo dõi dòng tiền thu/chi rõ ràng, từ đó điều chỉnh kế hoạch chi tiêu hợp lý", "Không cần phải làm việc nữa", "Thay thế phần mềm soạn thảo văn bản"], correct: 1, cols: 1 }
+        { q: "Hàm COUNTIF có công dụng gì trong phần mềm bảng tính?", options: ["Tính tổng các giá trị.", "Đếm số ô thỏa mãn một điều kiện cho trước.", "Tìm giá trị lớn nhất.", "Sắp xếp dữ liệu."], correct: 1, cols: 2 },
+        { q: "Cú pháp cơ bản của hàm COUNTIF là gì?", options: ["COUNTIF(điều kiện, vùng dữ liệu)", "COUNTIF(vùng dữ liệu, điều kiện)", "COUNTIF(vùng dữ liệu, giá trị)", "COUNTIF(điều kiện)"], correct: 1, cols: 2 },
+        { q: "Trong công thức COUNTIF(B2:B10, \"Ăn uống\"), phần \"Ăn uống\" đóng vai trò gì?", options: ["Vùng dữ liệu cần đếm.", "Giá trị trả về của hàm.", "Điều kiện để đếm.", "Phạm vi tính toán."], correct: 2, cols: 2 },
+        { q: "Để đếm số lần xuất hiện của một khoản chi cụ thể trong một danh sách, hàm nào sau đây là phù hợp nhất?", options: ["SUMIF", "AVERAGEIF", "COUNTIF", "MAXIF"], correct: 2, cols: 2 },
+        { q: "Giả sử bạn có một bảng tính chi tiêu gia đình, cột B là các khoản chi. Khi bạn sử dụng hàm COUNTIF để đếm số lần chi tiêu cho khoản \"Ở\", kết quả nhận được cho biết điều gì?", options: ["Tổng số tiền đã chi cho khoản \"Ở\".", "Số lần bạn đã chi tiền cho khoản \"Ở\".", "Tỉ lệ phần trăm chi cho khoản \"Ở\" so với tổng chi.", "Giá trị lớn nhất đã chi cho khoản \"Ở\"."], correct: 1, cols: 1 },
+        { q: "Hàm SUMIF có công dụng gì trong phần mềm bảng tính?", options: ["Đếm số ô thỏa mãn điều kiện.", "Tính tổng tất cả các giá trị số.", "Tính tổng các giá trị thỏa mãn một điều kiện cho trước.", "Tìm giá trị nhỏ nhất trong một phạm vi."], correct: 2, cols: 1 },
+        { q: "Cú pháp cơ bản của hàm SUMIF là gì?", options: ["SUMIF(điều kiện, vùng tính tổng, vùng điều kiện)", "SUMIF(vùng điều kiện, điều kiện)", "SUMIF(vùng tính tổng, điều kiện)", "SUMIF(vùng điều kiện, điều kiện, vùng tính tổng)"], correct: 3, cols: 1 },
+        { q: "Trong công thức SUMIF($B$2:$B$10,G2,$D$2:$D$10), $D$2:$D$10 là thành phần nào của hàm SUMIF?", options: ["Vùng điều kiện.", "Điều kiện.", "Vùng tính tổng.", "Kết quả trả về."], correct: 2, cols: 2 },
+        { q: "Bạn muốn tính tổng số tiền chi tiêu cho khoản \"Đi lại\" trong bảng tính. Tại sao việc sử dụng hàm SUMIF hiệu quả hơn hàm SUM?", options: ["Hàm SUM chỉ tính được tổng một ô duy nhất.", "Hàm SUMIF tự động định dạng tiền tệ.", "Hàm SUMIF cho phép tính tổng dựa trên một điều kiện cụ thể, trong khi SUM tính tổng tất cả.", "Hàm SUM chỉ có thể cộng số nguyên, SUMIF có thể cộng số thập phân."], correct: 2, cols: 1 },
+        { q: "Hàm IF trong phần mềm bảng tính có công dụng gì?", options: ["Đếm số ô chứa văn bản.", "Thực hiện phép tính cộng.", "Trả về một giá trị nếu điều kiện là TRUE và một giá trị khác nếu điều kiện là FALSE.", "Sắp xếp dữ liệu theo thứ tự bảng chữ cái."], correct: 2, cols: 1 },
+        { q: "Cú pháp cơ bản của hàm IF là gì?", options: ["IF(giá_trị_nếu_đúng, giá_trị_nếu_sai, biểu_thức_logic)", "IF(biểu_thức_logic, giá_trị_nếu_đúng, giá_trị_nếu_sai)", "IF(biểu_thức_logic, giá_trị_nếu_đúng)", "IF(giá_trị_nếu_đúng, biểu_thức_logic)"], correct: 1, cols: 1 },
+        { q: "Trong cú pháp IF(biểu_thức_logic, giá_trị_nếu_đúng, giá_trị_nếu_sai), biểu_thức_logic là gì?", options: ["Giá trị mà hàm sẽ trả về nếu điều kiện đúng.", "Giá trị mà hàm sẽ trả về nếu điều kiện sai.", "Một điều kiện hoặc phép so sánh trả về TRUE hoặc FALSE.", "Tên của hàm logic."], correct: 2, cols: 1 },
+        { q: "Công thức =IF(N3>50%,\"Nhiều hơn\", \"Ít hơn\") có ý nghĩa gì khi áp dụng vào bảng tính quản lý tài chính?", options: ["Nếu N3 lớn hơn 50%, hiển thị \"Ít hơn\"; ngược lại hiển thị \"Nhiều hơn\".", "Nếu N3 lớn hơn 50%, hiển thị \"Nhiều hơn\"; ngược lại hiển thị \"Ít hơn\".", "Luôn hiển thị \"Nhiều hơn\" nếu N3 là số.", "Luôn hiển thị \"Ít hơn\" nếu N3 không phải là số."], correct: 1, cols: 1 },
+        { q: "Công thức =IF(N3>80%,\"Nhiều quá\",IF(N3>50%,\"Nhiều hơn\", \"Ít hơn\")) dùng để làm gì?", options: ["Chỉ kiểm tra nếu N3 lớn hơn 80%.", "Chỉ kiểm tra nếu N3 lớn hơn 50%.", "Đánh giá N3 theo nhiều mức độ điều kiện khác nhau và đưa ra nhận xét tương ứng.", "Luôn trả về \"Nhiều quá\" hoặc \"Ít hơn\"."], correct: 2, cols: 1 },
+        { q: "Để tham chiếu đến ô H7 của trang tính 'Thu nhập' từ một trang tính khác, công thức nào sau đây là đúng?", options: ["=H7@'Thu nhập'", "='Thu nhập'!H7", "=H7!Thu nhập", "=Thu nhập.H7"], correct: 1, cols: 2 },
+        { q: "Khi tham chiếu dữ liệu từ các trang tính khác, phần nào trong công thức 'Tên trang tính'!Địa chỉ ô dùng để xác định vị trí dữ liệu?", options: ["Chỉ 'Tên trang tính'.", "Chỉ 'Địa chỉ ô'.", "Cả 'Tên trang tính' và 'Địa chỉ ô'.", "Dấu chấm than (!)."], correct: 2, cols: 2 }
     ];
 
-    // --- NGÂN HÀNG ĐÚNG/SAI (12 Câu lớn) ---
+    // --- NGÂN HÀNG ĐÚNG/SAI (4 CÂU) ---
+    // Bổ sung bảng dữ liệu tham khảo vào phần nội dung câu 17.
+    const tableHTML = `
+        <div style="margin-top: 10px; font-weight: normal; color: #475569;">
+            <i>Quan sát bảng số liệu sau đây và trả lời các ý bên dưới:</i>
+            <table class="data-table">
+                <tr><th>STT</th><th>KHOẢN CHI</th><th>MỤC CHI TIẾT</th><th>SỐ TIỀN</th><th>GHI CHÚ</th></tr>
+                <tr><td>1</td><td>Ở</td><td>Tiền điện</td><td>800</td><td></td></tr>
+                <tr><td>2</td><td>Ở</td><td>Tiền nước</td><td>120</td><td></td></tr>
+                <tr><td>3</td><td>Ăn uống</td><td>Đi siêu thị</td><td>600000</td><td>(Mức chi > 500.000)</td></tr>
+                <tr><td>4</td><td>Đi lại</td><td>Đổ xăng máy</td><td>50000</td><td></td></tr>
+                <tr><td>5</td><td>Ở</td><td>Tiền điện</td><td>120</td><td></td></tr>
+                <tr><td>6</td><td>Ăn uống</td><td>Ăn sáng</td><td>30000</td><td></td></tr>
+                <tr><td>7</td><td>Đi lại</td><td>Tiền nước</td><td>50000</td><td></td></tr>
+                <tr><td>8</td><td>Ở</td><td>Đi siêu thị</td><td>110</td><td></td></tr>
+                <tr><td>9</td><td>Ăn uống</td><td>Đổ xăng máy</td><td>900</td><td></td></tr>
+            </table>
+        </div>
+    `;
+
     const allTfBank = [
-        // BÀI 10a (COUNTIF)
-        { lesson: "10a", title: "Cú pháp và ý nghĩa của hàm COUNTIF:", items: [
-            { text: "a) Hàm COUNTIF dùng để tính tổng các ô chứa số liệu.", ans: "S" },
-            { text: "b) Cú pháp chuẩn của hàm là =COUNTIF(vùng_dữ_liệu, điều_kiện).", ans: "D" },
-            { text: "c) Trong hàm COUNTIF, điều kiện >100 bắt buộc phải đặt trong cặp dấu ngoặc kép.", ans: "D" },
-            { text: "d) Không thể dùng hàm COUNTIF để đếm dữ liệu dạng chữ (văn bản).", ans: "S" }
+        { title: `Bạn đang quản lý chi tiêu gia đình bằng bảng tính Excel. Cột "Khoản chi" nằm ở cột B (từ B2 đến B10) và chứa các mục như "Ăn uống", "Ở", "Đi lại". ${tableHTML}`, items: [
+            { text: "a) Hàm COUNTIF dùng để tính tổng số tiền chi tiêu.", ans: "S" },
+            { text: "b) Cú pháp cơ bản của hàm COUNTIF là COUNTIF(vùng dữ liệu, điều kiện).", ans: "D" },
+            { text: "c) Để đếm số lần chi tiêu cho khoản \"Ở\" trong cột B từ B2 đến B10, công thức COUNTIF(B2:B10, \"Ở\") sẽ trả về kết quả đúng.", ans: "D" },
+            { text: "d) Nếu muốn đếm số lần chi tiêu có giá trị lớn hơn 500.000đ trong cột \"Số tiền\" (từ D2 đến D10), có thể dùng công thức COUNTIF(D2:D10, \">500000\").", ans: "D" }
         ]},
-        { lesson: "10a", title: "Ứng dụng hàm COUNTIF:", items: [
-            { text: "a) Để đếm số ngày chi tiêu cho mục 'Ăn sáng', ta có thể dùng COUNTIF.", ans: "D" },
-            { text: "b) Tham số criteria chỉ nhận các giá trị là số, không nhận chữ cái.", ans: "S" },
-            { text: "c) Công thức =COUNTIF(A1:A10, 5) sẽ đếm các ô trong vùng A1:A10 có chứa số 5.", ans: "D" },
-            { text: "d) Kết quả trả về của hàm COUNTIF luôn luôn là một văn bản.", ans: "S" }
+        { title: "Để tổng hợp số tiền chi tiêu theo từng khoản, bạn cần sử dụng hàm phù hợp. Giả sử cột \"Khoản chi\" từ B2 đến B10 và cột \"Số tiền\" từ D2 đến D10.", items: [
+            { text: "a) Hàm SUMIF dùng để tính tổng các giá trị thỏa mãn một điều kiện cho trước.", ans: "D" },
+            { text: "b) Cú pháp của hàm SUMIF bao gồm ba đối số: SUMIF(vùng điều kiện, điều kiện, vùng tính tổng).", ans: "D" },
+            { text: "c) Hàm SUM chỉ có thể tính tổng các ô chứa số đơn thuần, trong khi SUMIF có thể tính tổng các ô chứa số dựa trên điều kiện của các ô khác.", ans: "D" },
+            { text: "d) Nếu ô H2 hiển thị 920 là tổng tiền cho khoản \"Ở\" từ dữ liệu cột Khoản chi (B) và cột Số tiền (D), điều đó có nghĩa là hàm SUMIF đã hoạt động đúng khi tổng hợp các mục chi \"Ở\" từ hai mục tiền điện 800 và tiền nước 120.", ans: "S" }
         ]},
-        { lesson: "10a", title: "Xử lý lỗi COUNTIF:", items: [
-            { text: "a) Khi gõ thiếu chữ 'F' trong COUNTIF, Excel sẽ báo lỗi #NAME?.", ans: "D" },
-            { text: "b) Hàm COUNTIF bắt buộc phải có đủ 3 tham số để hoạt động.", ans: "S" },
-            { text: "c) Có thể sử dụng COUNTIF để đếm số học sinh đạt điểm 10 trong lớp.", ans: "D" },
-            { text: "d) Dấu phẩy (,) và chấm phẩy (;) được dùng để ngăn cách các tham số tùy thuộc vào cài đặt máy tính.", ans: "D" }
+        { title: "Bạn muốn đưa ra nhận xét về tình hình chi tiêu dựa trên tỉ lệ phần trăm chi so với tổng thu nhập.", items: [
+            { text: "a) Hàm IF là một hàm logic trả về giá trị TRUE hoặc FALSE.", ans: "S" },
+            { text: "b) Ba thành phần bắt buộc của hàm IF là biểu thức logic, giá trị nếu đúng, và giá trị nếu sai.", ans: "S" },
+            { text: "c) Công thức `=IF(N3>50%,\"Nhiều hơn\", \"Ít hơn\")` có nghĩa là nếu tỉ lệ chi tại ô N3 lớn hơn 50% thì nhận xét là \"Nhiều hơn\", ngược lại là \"Ít hơn\".", ans: "D" },
+            { text: "d) Để xác định tỉ lệ thưởng là 5% nếu doanh thu (ô B2) trên 10 triệu và 0% nếu không, công thức `=IF(B2>10000000, 5%, 0%)` là chính xác.", ans: "D" }
         ]},
-
-        // BÀI 11a (SUMIF)
-        { lesson: "11a", title: "Đặc điểm hàm SUMIF:", items: [
-            { text: "a) Hàm SUMIF có tối đa 3 tham số.", ans: "D" },
-            { text: "b) Tham số sum_range (vùng tính tổng) là bắt buộc phải nhập trong mọi trường hợp.", ans: "S" },
-            { text: "c) Hàm SUMIF có thể được dùng để tính tổng số tiền chi cho việc 'Học tập'.", ans: "D" },
-            { text: "d) Hàm SUMIF cho phép tính tổng dựa trên nhiều điều kiện khác nhau cùng một lúc.", ans: "S" }
-        ]},
-        { lesson: "11a", title: "Cấu trúc SUMIF:", items: [
-            { text: "a) 'range' là vùng chứa các dữ liệu để đối chiếu với điều kiện.", ans: "D" },
-            { text: "b) 'sum_range' phải là vùng chứa các dữ liệu dạng số cần tính tổng.", ans: "D" },
-            { text: "c) Khi bỏ qua tham số thứ 3, Excel sẽ mặc định tính tổng trên vùng 'range'.", ans: "D" },
-            { text: "d) =SUMIF(A1:A5, \"Thu\", B1:B5) sẽ tính tổng cột A nếu cột B là chữ 'Thu'.", ans: "S" }
-        ]},
-        { lesson: "11a", title: "Thực hành SUMIF:", items: [
-            { text: "a) Lỗi #VALUE! thường xuất hiện khi ta gõ sai tên hàm SUMIF.", ans: "S" },
-            { text: "b) Hàm SUMIF chỉ đếm số lần xuất hiện chứ không tính tổng giá trị.", ans: "S" },
-            { text: "c) Điều kiện văn bản trong SUMIF phải được bao bọc bởi cặp dấu ngoặc kép (\"\").", ans: "D" },
-            { text: "d) Có thể sử dụng SUMIF để tính tổng các khoản thu nhập lớn hơn 10 triệu đồng.", ans: "D" }
-        ]},
-
-        // BÀI 12a (IF)
-        { lesson: "12a", title: "Nguyên lý hàm IF:", items: [
-            { text: "a) Hàm IF chỉ trả về một kết quả duy nhất dựa trên biểu thức điều kiện đúng hoặc sai.", ans: "D" },
-            { text: "b) Biểu thức so sánh trong IF không được dùng dấu bằng (=).", ans: "S" },
-            { text: "c) Hàm IF có 3 tham số: biểu thức kiểm tra, giá trị nếu đúng, giá trị nếu sai.", ans: "D" },
-            { text: "d) Kết quả trả về của hàm IF bắt buộc phải là chữ, không được là số.", ans: "S" }
-        ]},
-        { lesson: "12a", title: "Ứng dụng hàm IF:", items: [
-            { text: "a) Để phân loại 3 mức đánh giá (Tốt, Khá, Đạt) cần dùng ít nhất 2 hàm IF lồng nhau.", ans: "D" },
-            { text: "b) Biểu thức A1 <> B1 có nghĩa là so sánh ô A1 nhỏ hơn B1.", ans: "S" },
-            { text: "c) IF(5>10, \"Đúng\", \"Sai\") sẽ hiển thị chữ \"Sai\" trên bảng tính.", ans: "D" },
-            { text: "d) Hàm IF lồng nhau (Nested IF) là việc sử dụng hàm SUM bên trong hàm IF.", ans: "S" }
-        ]},
-        { lesson: "12a", title: "Đánh giá điều kiện với IF:", items: [
-            { text: "a) Trong hàm IF, có thể dùng công thức tính toán thay cho giá trị trả về (VD: B2*10%).", ans: "D" },
-            { text: "b) Có thể dùng hàm IF để đưa ra cảnh báo 'Vượt ngân sách' nếu số tiền chi lớn hơn dự kiến.", ans: "D" },
-            { text: "c) Dấu >= trong Excel mang ý nghĩa là lớn hơn.", ans: "S" },
-            { text: "d) Khi viết sai dấu ngoặc đóng của hàm IF, Excel sẽ tự động bỏ qua và tính tiếp.", ans: "S" }
-        ]},
-
-        // BÀI 13a (QUẢN LÝ TÀI CHÍNH GIA ĐÌNH)
-        { lesson: "13a", title: "Cấu trúc bảng tính tài chính:", items: [
-            { text: "a) Bảng quản lý tài chính thường gồm phần Thu nhập, Chi tiêu và Tổng hợp.", ans: "D" },
-            { text: "b) Số dư (NET) được tính bằng cách lấy Tổng chi trừ đi Tổng thu.", ans: "S" },
-            { text: "c) Việc liên kết dữ liệu giúp bảng tổng hợp tự động thay đổi kết quả khi dữ liệu gốc thay đổi.", ans: "D" },
-            { text: "d) Trong phần mềm Excel, không thể lấy dữ liệu từ một Sheet khác.", ans: "S" }
-        ]},
-        { lesson: "13a", title: "Quản lý chi tiêu:", items: [
-            { text: "a) Dấu hiệu của việc thâm hụt tài chính là Số dư (NET) mang giá trị âm.", ans: "D" },
-            { text: "b) Mục 'Nhu cầu thiết yếu' bao gồm các khoản tiền mua đồ chơi, đi du lịch xa.", ans: "S" },
-            { text: "c) Tính năng liên kết Sheet được thực hiện bằng cách gõ dấu bằng (=) rồi nháy chuột sang ô của Sheet cần lấy.", ans: "D" },
-            { text: "d) Bảng tính Excel không có khả năng vẽ biểu đồ để so sánh thu chi.", ans: "S" }
-        ]},
-        { lesson: "13a", title: "Quy tắc 50-30-20:", items: [
-            { text: "a) Quy tắc 50-30-20 là phương pháp quản lý phân bổ thu nhập cá nhân/gia đình hợp lý.", ans: "D" },
-            { text: "b) Theo quy tắc này, 50% thu nhập nên dành cho tiết kiệm và đầu tư.", ans: "S" },
-            { text: "c) Mức 30% được khuyên dùng để đáp ứng các 'Mong muốn cá nhân'.", ans: "D" },
-            { text: "d) Nếu gia đình chi tới 80% thu nhập cho 'Mong muốn cá nhân' thì đó là cách chi tiêu hợp lý.", ans: "S" }
+        { title: "Bạn đang hoàn thiện bảng tính quản lý tài chính gia đình và muốn đánh giá chi tiêu chi tiết hơn, đồng thời tham chiếu dữ liệu từ các trang tính khác.", items: [
+            { text: "a) Để lấy tổng thu nhập từ ô H7 của trang tính 'Thu nhập' vào ô B14 của trang tính 'Tổng hợp', công thức đúng là 'Thu nhập'!H7.", ans: "S" },
+            { text: "b) Việc tạo trang tính tổng hợp dữ liệu tài chính gia đình giúp người dùng có cái nhìn tổng quát về thu chi, cân đối tài chính dễ dàng hơn so với việc xem từng trang tính riêng lẻ.", ans: "D" },
+            { text: "c) Để đưa ra nhận xét \"Nhiều quá\" (nếu N3>80%), \"Nhiều hơn\" (nếu N3>50%) hoặc \"Ít hơn\", công thức =IF(N3>80%,\"Nhiều quá\",IF(N3>50%,\"Nhiều hơn\", \"Ít hơn\")) là chính xác.", ans: "D" },
+            { text: "d) Để tính tổng số tiền cho khoản \"Ăn uống\" trong cột D từ D2 đến D10, với điều kiện khoản chi ở cột B từ B2 đến B10 là \"Ăn uống\", công thức =SUMIF(B2:B10,\"Ăn uống\",D2:D10) là đúng.", ans: "D" }
         ]}
     ];
 
-    // --- NGÂN HÀNG TỰ LUẬN (9 CÂU VẬN DỤNG/THÔNG HIỂU) ---
-    // Yêu cầu bốc: Bài 12a (1 TH), Bài 13a (2 VD)
+    // --- NGÂN HÀNG THỰC HÀNH (Thay thế Tự luận) ---
     const allEssayBank = [
-        // BÀI 12a (TH) - 3 câu
-        { lesson: "12a_TH", text: "Hàm IF lồng nhau là gì? Hãy viết một công thức sử dụng hàm IF lồng nhau để xếp loại chi tiêu: Nếu số tiền > 5000 thì 'Cao', nếu > 2000 thì 'Trung bình', còn lại 'Thấp' (giả sử số tiền ở ô C2). (1.0 điểm)" },
-        { lesson: "12a_TH", text: "Giải thích ý nghĩa của công thức sau: =IF(E5 > F5, 'Vượt định mức', 'Trong định mức'). Nếu E5=100 và F5=100 thì kết quả trả về là gì? (1.0 điểm)" },
-        { lesson: "12a_TH", text: "Khi nào chúng ta cần sử dụng hàm IF lồng nhau thay vì hàm IF đơn giản? Cho một ví dụ minh họa thực tế trong việc dùng IF để quản lý tài chính cá nhân. (1.0 điểm)" },
-
-        // BÀI 13a (VD) - 6 câu
-        { lesson: "13a_VD", text: "Trình bày các bước thao tác để tạo một công thức tham chiếu dữ liệu từ ô B5 của trang tính 'Thu_nhap' sang ô C3 của trang tính 'Tong_hop'? Việc tham chiếu này mang lại lợi ích gì cho việc quản lý tài chính? (1.0 điểm)" },
-        { lesson: "13a_VD", text: "Một gia đình có Tổng thu nhập là 20.000.000 VNĐ/tháng. Nếu áp dụng quy tắc tài chính 50-30-20, hãy tính số tiền cụ thể phân bổ cho 3 nhóm: Nhu cầu thiết yếu, Mong muốn cá nhân, và Tiết kiệm/Đầu tư. (1.0 điểm)" },
-        { lesson: "13a_VD", text: "Giả sử ô D10 chứa 'Tổng thu nhập' và ô E10 chứa 'Tổng chi tiêu'. Hãy viết công thức tính 'Số dư' (NET) tại ô F10. Nếu số dư (NET) bị âm, điều đó phản ánh tình trạng tài chính của gia đình như thế nào? (1.0 điểm)" },
-        { lesson: "13a_VD", text: "Em hãy thiết kế một cấu trúc cơ bản cho bảng 'Tổng hợp thu chi' (gồm những cột, hàng nào) để gia đình em có thể theo dõi được tình trạng Số dư (NET) trong 1 tháng? (1.0 điểm)" },
-        { lesson: "13a_VD", text: "Nếu bảng tính tổng hợp thu chi tháng này cho thấy số tiền chi cho 'Mong muốn cá nhân' chiếm tới 60% tổng thu nhập (vượt xa mức 30% theo quy tắc 50-30-20), em sẽ đưa ra lời khuyên hoặc cảnh báo gì để cải thiện tình trạng này? (1.0 điểm)" },
-        { lesson: "13a_VD", text: "Nêu cách kết hợp giữa việc liên kết dữ liệu các Sheet và sử dụng hàm SUMIF để bảng 'Tổng hợp thu chi' tự động tính toán tổng tiền cho hạng mục 'Học phí' mỗi khi có phát sinh chi tiêu mới? (1.0 điểm)" }
+        { text: "Dựa vào bảng dữ liệu chi tiêu đã quan sát ở Phần II, em hãy ghi lại cú pháp hàm SUMIF để tính tổng số tiền chi cho khoản \"Đi lại\". Giả sử cột Khoản chi là B2:B10 và cột Số tiền là D2:D10." }
     ];
 
     // ==========================================
@@ -352,14 +282,8 @@
     let selectedMcq = [], selectedTf = [], selectedEssay = [];
 
     function generateRandomExam() {
-        // 1. RÚT TRẮC NGHIỆM (MCQ) - 12 CÂU (Mỗi bài 3 câu)
-        let mcq10a = shuffleArray(allMcqBank.filter(q => q.lesson === "10a")).slice(0, 3);
-        let mcq11a = shuffleArray(allMcqBank.filter(q => q.lesson === "11a")).slice(0, 3);
-        let mcq12a = shuffleArray(allMcqBank.filter(q => q.lesson === "12a")).slice(0, 3);
-        let mcq13a = shuffleArray(allMcqBank.filter(q => q.lesson === "13a")).slice(0, 3);
-        
-        selectedMcq = shuffleArray([...mcq10a, ...mcq11a, ...mcq12a, ...mcq13a]);
-
+        // Lấy toàn bộ 16 câu Trắc nghiệm nhiều lựa chọn (Đảo vị trí câu và đáp án)
+        selectedMcq = shuffleArray([...allMcqBank]);
         selectedMcq.forEach(q => {
             let optsWithStatus = q.options.map((text, idx) => ({ text: text, isCorrect: (idx === q.correct) }));
             optsWithStatus = shuffleArray(optsWithStatus);
@@ -367,28 +291,18 @@
             q.correct = optsWithStatus.findIndex(o => o.isCorrect); 
         });
 
-        // 2. RÚT ĐÚNG/SAI (T/F) - 4 CÂU
-        let tf10a = shuffleArray(allTfBank.filter(q => q.lesson === "10a"))[0];
-        let tf11a = shuffleArray(allTfBank.filter(q => q.lesson === "11a"))[0];
-        let tf12a = shuffleArray(allTfBank.filter(q => q.lesson === "12a"))[0]; 
-        let tf13a = shuffleArray(allTfBank.filter(q => q.lesson === "13a"))[0]; 
-        
-        selectedTf = shuffleArray([tf10a, tf11a, tf12a, tf13a]);
+        // Lấy toàn bộ 4 câu Đúng/Sai (Đảo vị trí câu)
+        selectedTf = shuffleArray([...allTfBank]);
 
-        // 3. RÚT TỰ LUẬN (ESSAY) - 3 CÂU
-        let es12a_TH = shuffleArray(allEssayBank.filter(q => q.lesson === "12a_TH"))[0];
-        let es13a_VD_list = shuffleArray(allEssayBank.filter(q => q.lesson === "13a_VD"));
-        let es13a_VD_1 = es13a_VD_list[0];
-        let es13a_VD_2 = es13a_VD_list[1];
-        
-        selectedEssay = [es12a_TH.text, es13a_VD_1.text, es13a_VD_2.text]; 
+        // Lấy 1 câu Thực hành (Thay thế tự luận trên form)
+        selectedEssay = [allEssayBank[0].text]; 
     }
 
     // ==========================================
     // 3. GIAO DIỆN & HOẠT ĐỘNG CHUNG
     // ==========================================
     let timeStart = new Date();
-    let duration = 45 * 60; 
+    let duration = 30 * 60; // 30 phút
     let timerInterval;
 
     function encodeUTF8(str) { return btoa(unescape(encodeURIComponent(str || ""))); }
@@ -441,7 +355,7 @@
         let globalQIndex = 1; 
 
         // MCQ
-        html += `<div class="section-title">I. PHẦN TRẮC NGHIỆM NHIỀU LỰA CHỌN (3.0 ĐIỂM)</div>`;
+        html += `<div class="section-title">I. PHẦN TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN (3.0 ĐIỂM)</div>`;
         selectedMcq.forEach((q, index) => {
             let gridClass = q.cols === 2 ? "grid-2" : "grid-1";
             html += `
@@ -473,9 +387,10 @@
                         <th style="width: 60px;">SAI</th>
                     </tr>`;
             q.items.forEach((item, iIndex) => {
+                let charId = ['a', 'b', 'c', 'd'][iIndex];
                 html += `
                     <tr>
-                        <td class="tf-text">${item.text}</td>
+                        <td class="tf-text"><b>${charId})</b> ${item.text.replace(/^[abcd]\)\s*/, '')}</td>
                         <td><input type="radio" name="tf_${qIndex}_${iIndex}" value="D" class="tf-radio" onchange="markAnswered(${globalQIndex})"></td>
                         <td><input type="radio" name="tf_${qIndex}_${iIndex}" value="S" class="tf-radio" onchange="markAnswered(${globalQIndex})"></td>
                     </tr>`;
@@ -484,8 +399,8 @@
             globalQIndex++;
         });
 
-        // ESSAY
-        html += `<div class="section-title" style="margin-top: 30px;">III. PHẦN TỰ LUẬN (3.0 ĐIỂM)</div>`;
+        // ESSAY (THỰC HÀNH)
+        html += `<div class="section-title" style="margin-top: 30px;">III. PHẦN THỰC HÀNH (3.0 ĐIỂM)</div>`;
         selectedEssay.forEach((qText, index) => {
             html += `
             <div class="question-card" id="q-${globalQIndex}">
@@ -512,7 +427,7 @@
                             <input type="file" accept="image/*" capture="environment" onchange="insertImage(this, '${index}', ${globalQIndex})">
                         </label>
                     </div>
-                    <div class="essay-box" id="essay_${index}" contenteditable="true" placeholder="Nhập câu trả lời của em vào đây..." oninput="markAnswered(${globalQIndex}, this.innerHTML)"></div>
+                    <div class="essay-box" id="essay_${index}" contenteditable="true" placeholder="Nhập câu trả lời của em hoặc tải ảnh chụp thực hành lên đây..." oninput="markAnswered(${globalQIndex}, this.innerHTML)"></div>
                 </div>
             </div>`;
             globalQIndex++;
@@ -594,11 +509,12 @@
 
         // 1. Chấm điểm MCQ
         let mcqAnsStr = "";
+        let mcqWeight = 3 / selectedMcq.length; // Điểm 3.0 chia đều cho 16 câu
         selectedMcq.forEach((q, index) => {
             const selected = document.querySelector(`input[name="mcq_${index}"]:checked`);
             let userAns = selected ? parseInt(selected.value) : -1;
             let letterAns = userAns > -1 ? ["A", "B", "C", "D"][userAns] : "X";
-            if (userAns === q.correct) scoreMCQ += 0.25;
+            if (userAns === q.correct) scoreMCQ += mcqWeight;
             mcqAnsStr += `C${index + 1}${letterAns}-`;
         });
         answersCodeArray.push(mcqAnsStr.slice(0, -1));
@@ -609,7 +525,7 @@
             q.items.forEach((item, iIndex) => {
                 const selected = document.querySelector(`input[name="tf_${qIndex}_${iIndex}"]:checked`);
                 const userAns = selected ? selected.value : "X";
-                const qNum = qIndex + 13; 
+                const qNum = qIndex + 17; 
                 const letter = ["a", "b", "c", "d"][iIndex];
                 if (userAns === item.ans) scoreTF += 0.25;
                 tfAnsStr += `C${qNum}${letter}${userAns}-`;
@@ -617,7 +533,7 @@
         });
         answersCodeArray.push(tfAnsStr.slice(0, -1));
 
-        // 3. Gom Tự luận
+        // 3. Gom Tự luận (Thực hành)
         let essayEncodedStr = "";   
         let essayPlainForSheet = ""; 
         
@@ -632,9 +548,9 @@
                 plainText = "(Không trả lời)";
             }
 
-            essayPlainForSheet += `Câu ${index + 17}:\n${plainText}\n\n`;
+            essayPlainForSheet += `Câu ${index + 21}:\n${plainText}\n\n`;
             let base64Ans = htmlAns ? encodeUTF8(htmlAns) : "X";
-            essayEncodedStr += `C${index + 17}:${base64Ans}-`; 
+            essayEncodedStr += `C${index + 21}:${base64Ans}-`; 
         });
 
         let totalScore = scoreMCQ + scoreTF; 
@@ -673,7 +589,7 @@
         }).then(() => {
             sessionStorage.setItem('report_time', timeTakenStr);
             sessionStorage.setItem('report_score_tn', totalScore.toFixed(2));
-            sessionStorage.setItem('report_subject', 'Tin học 9'); // Môn Tin học 9
+            sessionStorage.setItem('report_subject', 'Tin học 9'); 
             
             let mcqReportQ = "<tr>", mcqReportA = "<tr>", mcqReportQ2 = "<tr>", mcqReportA2 = "<tr>"; 
             selectedMcq.forEach((q, i) => {
@@ -686,7 +602,7 @@
 
             let tfReportHtml = "<tr><th>Câu</th><th>Ý a</th><th>Ý b</th><th>Ý c</th><th>Ý d</th></tr>";
             selectedTf.forEach((q, qIndex) => {
-                let row = `<tr><td><b>Câu ${qIndex + 13}</b></td>`;
+                let row = `<tr><td><b>Câu ${qIndex + 17}</b></td>`;
                 q.items.forEach((item, iIndex) => {
                     const selected = document.querySelector(`input[name="tf_${qIndex}_${iIndex}"]:checked`);
                     let userAns = selected ? selected.value : "";
@@ -703,7 +619,7 @@
                 if(tempDiv.textContent.trim() === "" && !htmlAns.includes("<img")) htmlAns = "<i>(Bỏ trống)</i>";
                 essayReportHtml += `
                 <div class="essay-item" style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc;">
-                    <b style="color: #2563eb;">Câu ${i + 17}:</b><br>
+                    <b style="color: #2563eb;">Câu ${i + 21} (Thực hành):</b><br>
                     <div style="margin-top: 5px;"><b>Trả lời:</b><br>${htmlAns}</div>
                 </div>`;
             });
