@@ -247,6 +247,10 @@
                 sessionStorage.setItem('exam_school', CONFIG.SCHOOL_NAME.trim());
                 sessionStorage.setItem('user_role', 'student');
 
+                // LƯU MẬT KHẨU VÀ TÀI KHOẢN ĐỂ STUDENT.HTML XỬ LÝ ĐỔI PASS
+                sessionStorage.setItem('user_pass', enteredPass);
+                sessionStorage.setItem('login_username', slcName.value); // slcName.value chính là s[4] (Mã học sinh hoặc số điện thoại)
+
                 window.location.href = "student.html"; 
             } else {
                 alert("Mật khẩu không chính xác!");
