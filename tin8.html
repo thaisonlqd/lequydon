@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đề kiểm tra giữa học kỳ II - Tin học 8</title>
+    <title>Đề ôn tự luyện - Tin học 8</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="config.js"></script>
 
@@ -138,12 +138,12 @@
                     </div>
                 </div>
                 <div class="classic-right">
-                    <div class="exam-title">ĐỀ KIỂM TRA GIỮA HỌC KỲ II<br>NĂM HỌC 2025 - 2026</div>
-                    <div class="exam-subject">MÔN: <span style="color: var(--primary);">TIN HỌC – LỚP 8</span></div>
+                    <div class="exam-title">ĐỀ ÔN TẬP TỰ LUYỆN</div>
+                    <div class="exam-subject">MÔN: <span style="color: var(--primary);">TIN HỌC 8</span></div>
                 </div>
             </div>
             <div class="classic-header-bottom">
-                Thời gian làm bài: 45 phút (Không kể thời gian giao đề)
+                Thời gian làm bài: 45 phút (không kể thời gian giao đề)
             </div>
         </div>
 
@@ -185,62 +185,160 @@
 
 <script>
     // ==========================================
-    // 1. NGÂN HÀNG CÂU HỎI (TIN HỌC 8 - Giữa HK2)
+    // 1. NGÂN HÀNG CÂU HỎI (TIN HỌC 8 - KNTT)
+    // SỐ LƯỢNG: GẤP 3 LẦN MA TRẬN
     // ==========================================
     
-    // --- NGÂN HÀNG MCQ (12 CÂU) ---
+    // --- NGÂN HÀNG MCQ (36 CÂU) ---
     const allMcqBank = [
-        { q: "Trong phần mềm soạn thảo văn bản, phần trên cùng của trang văn bản được gọi là gì? [cite: 92]", options: ["Chân trang (Footer). [cite: 93]", "Đầu trang (Header). [cite: 93]", "Lề trang (Margin). [cite: 94]", "Thân trang (Body). [cite: 94]"], correct: 1, cols: 2 },
-        { q: "Khi đánh số trang trong văn bản, ta có thể đặt số trang ở vị trí nào? [cite: 95]", options: ["Chỉ ở đầu trang. [cite: 96]", "Chỉ ở chân trang. [cite: 96]", "Đầu trang hoặc chân trang. [cite: 97]", "Chỉ ở lề trái. [cite: 97]"], correct: 2, cols: 2 },
-        { q: "Trong phần mềm trình chiếu, để định dạng màu sắc cho văn bản, ta sử dụng nhóm lệnh nào trên thẻ Home? [cite: 98]", options: ["Paragraph. [cite: 99]", "Drawing. [cite: 99]", "Font. [cite: 99]", "Editing. [cite: 99]"], correct: 2, cols: 2 },
-        { q: "Lệnh nào sau đây được sử dụng để đánh số thứ tự cho các trang chiếu? [cite: 100]", options: ["Insert / Slide Number. [cite: 101]", "Design / Slide Number. [cite: 101]", "View / Slide Number. [cite: 102]", "Home / Numbering. [cite: 102]"], correct: 0, cols: 2 },
-        { q: "Trong hộp thoại Header and Footer của phần mềm trình chiếu, tùy chọn \"Apply to All\" có ý nghĩa gì? [cite: 103]", options: ["Áp dụng cho trang chiếu hiện tại. [cite: 104]", "Áp dụng cho tất cả các trang chiếu. [cite: 104]", "Áp dụng cho trang tiêu đề. [cite: 105]", "Áp dụng cho trang cuối cùng. [cite: 105]"], correct: 1, cols: 2 },
-        { q: "Thông tin ở đầu trang và chân trang trong bài trình chiếu thường bao gồm những gì? [cite: 106]", options: ["Tên người trình bày, số trang, ngày trình bày. [cite: 107]", "Video và âm thanh. [cite: 107]", "Biểu đồ và hình ảnh động. [cite: 108]", "Hiệu ứng chuyển trang. [cite: 108]"], correct: 0, cols: 1 },
-        { q: "Theo nguyên tắc phối màu, nhóm màu nào sau đây mang lại cảm giác ấm áp, phấn chấn? [cite: 109]", options: ["Màu lạnh (Xanh, Tím). [cite: 110]", "Màu trung tính (Trắng, Đen). [cite: 110]", "Màu nóng (Đỏ, Cam, Vàng). [cite: 111]", "Màu Pastel. [cite: 111]"], correct: 2, cols: 2 },
-        { q: "Bản mẫu (Template) trong phần mềm trình chiếu là gì? [cite: 112]", options: ["Một tệp văn bản chứa nội dung thuyết trình. [cite: 113]", "Một bản thiết kế sẵn về bố cục, màu sắc, phông chữ. [cite: 114]", "Một hình ảnh nền cho trang chiếu. [cite: 115]", "Một video hướng dẫn sử dụng phần mềm. [cite: 116]"], correct: 1, cols: 1 },
-        { q: "Để tạo một bài trình chiếu mới từ bản mẫu có sẵn, ta thực hiện thao tác nào? [cite: 117]", options: ["File/Open. [cite: 118]", "File/Save. [cite: 118]", "File/New. [cite: 118]", "File/Print. [cite: 118]"], correct: 2, cols: 2 },
-        { q: "Phần mở rộng của tệp bản mẫu trong PowerPoint là gì? [cite: 119]", options: [".pptx [cite: 120]", ".docx [cite: 120]", ".potx [cite: 120]", ".xlsx [cite: 120]"], correct: 2, cols: 2 },
-        { q: "Lợi ích chính của việc sử dụng bản mẫu (Template) là gì? [cite: 121]", options: ["Giúp tiết kiệm thời gian và tạo giao diện thống nhất, chuyên nghiệp. [cite: 122]", "Tự động soạn thảo nội dung chi tiết cho bài thuyết trình. [cite: 123]", "Giúp máy tính chạy nhanh hơn khi trình chiếu. [cite: 124]", "Ngăn chặn việc sao chép nội dung bài trình chiếu. [cite: 125]"], correct: 0, cols: 1 },
-        { q: "Để chèn liên kết (Hyperlink) đến một trang web hoặc tệp tin khác trong trang chiếu, ta chọn đối tượng rồi nhấn chuột phải và chọn: [cite: 126]", options: ["Copy. [cite: 127]", "Format Picture. [cite: 127]", "Link (hoặc Hyperlink). [cite: 128]", "Bring to Front. [cite: 128]"], correct: 2, cols: 2 }
+        // Bài 9a: Tạo đầu trang, chân trang cho văn bản (6 câu NB - Lấy 2)
+        { lesson: "9a", lvl: "NB", q: "Phần đầu trang (Header) nằm ở vị trí nào của trang văn bản?", options: ["Phía trên cùng của trang", "Phía dưới cùng của trang", "Bên lề trái của trang", "Ở giữa trang văn bản"], correct: 0, cols: 2 },
+        { lesson: "9a", lvl: "NB", q: "Phần chân trang (Footer) thường dùng để chứa thông tin gì?", options: ["Nội dung chi tiết của bài văn", "Chữ ký người viết", "Số trang, thông tin bản quyền, tên tác giả", "Hình ảnh lớn minh họa"], correct: 2, cols: 1 },
+        { lesson: "9a", lvl: "NB", q: "Để chèn số trang vào văn bản trong MS Word, ta chọn thẻ lệnh nào?", options: ["Home", "Insert", "Design", "Layout"], correct: 1, cols: 2 },
+        { lesson: "9a", lvl: "NB", q: "Nút lệnh Page Number thường cho phép đặt số trang ở những vị trí nào?", options: ["Chỉ ở đầu trang", "Chỉ ở chân trang", "Đầu trang, chân trang hoặc lề trang", "Chỉ ở giữa trang"], correct: 2, cols: 1 },
+        { lesson: "9a", lvl: "NB", q: "Để thoát khỏi chế độ chỉnh sửa Header/Footer, ta có thể thao tác như thế nào?", options: ["Nhấn phím Delete", "Nhấn đúp chuột vào phần nội dung chính của văn bản", "Lưu lại tệp", "Đóng phần mềm Word"], correct: 1, cols: 1 },
+        { lesson: "9a", lvl: "NB", q: "Khi gõ một dòng chữ vào Header của trang 1, dòng chữ đó sẽ xuất hiện ở đâu?", options: ["Chỉ ở trang 1", "Tất cả các trang trong văn bản", "Chỉ các trang chẵn", "Chỉ trang cuối cùng"], correct: 1, cols: 1 },
+
+        // Bài 10a: Định dạng nâng cao cho trang chiếu (12 NB, 3 TH - Lấy 4 NB, 1 TH)
+        { lesson: "10a", lvl: "NB", q: "Trong phần mềm trình chiếu, để định dạng màu chữ ta sử dụng nút lệnh nào trong thẻ Home?", options: ["Font Size", "Font Color", "Bold", "Text Align"], correct: 1, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Để chèn Header & Footer trong PowerPoint, ta phải vào dải lệnh nào?", options: ["Design", "Transitions", "Insert", "Slide Show"], correct: 2, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Trong cửa sổ Header and Footer của PowerPoint, mục 'Slide number' dùng để làm gì?", options: ["Đổi màu nền trang", "Hiển thị số trang chiếu", "Thêm hình ảnh", "Đếm số dòng chữ"], correct: 1, cols: 1 },
+        { lesson: "10a", lvl: "NB", q: "Tùy chọn 'Don't show on title slide' trong hộp thoại Header/Footer có ý nghĩa gì?", options: ["Không cho phép chỉnh sửa tiêu đề", "Không hiển thị đầu trang/chân trang trên trang tiêu đề", "Xóa trang tiêu đề", "Không in trang tiêu đề ra giấy"], correct: 1, cols: 1 },
+        { lesson: "10a", lvl: "NB", q: "Nút lệnh 'Apply to All' trong hộp thoại Header & Footer dùng để làm gì?", options: ["Áp dụng cho slide hiện tại", "Xóa toàn bộ hiệu ứng", "Áp dụng định dạng cho tất cả các trang chiếu", "Lưu bài thuyết trình"], correct: 2, cols: 1 },
+        { lesson: "10a", lvl: "NB", q: "Trong phối màu, các màu Đỏ, Cam, Vàng thuộc nhóm màu gì?", options: ["Màu lạnh", "Màu trung tính", "Màu nóng", "Màu tối"], correct: 2, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Các màu Xanh lục, Xanh lam thuộc nhóm màu gì?", options: ["Màu lạnh", "Màu nóng", "Màu trung tính", "Màu sáng"], correct: 0, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Trắng, Đen, Xám thường được xếp vào nhóm màu nào?", options: ["Màu nóng", "Màu lạnh", "Màu trung tính", "Màu rực rỡ"], correct: 2, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Để người xem dễ đọc, kích thước chữ nội dung trên trang chiếu thường được khuyến nghị tối thiểu là bao nhiêu?", options: ["12 pt", "16 pt", "24 pt", "100 pt"], correct: 2, cols: 2 },
+        { lesson: "10a", lvl: "NB", q: "Để làm nổi bật tiêu đề trang, ta thường dùng phương pháp nào?", options: ["Cỡ chữ lớn hơn nội dung và in đậm", "Chữ nhỏ hơn nội dung", "Cùng cỡ chữ với nội dung", "Viết nghiêng và mờ đi"], correct: 0, cols: 1 },
+        { lesson: "10a", lvl: "NB", q: "Có thể chèn ngày tháng hiện tại vào chân trang chiếu được không?", options: ["Không thể", "Chỉ chèn được bằng cách gõ tay", "Có, sử dụng tùy chọn Date and time", "Chỉ khi máy tính có kết nối Internet"], correct: 2, cols: 1 },
+        { lesson: "10a", lvl: "NB", q: "Màu chữ và màu nền như thế nào được gọi là có độ tương phản cao?", options: ["Chữ đỏ trên nền cam", "Chữ đen trên nền trắng", "Chữ xanh dương trên nền xanh lá", "Chữ xám trên nền trắng"], correct: 1, cols: 1 },
+        
+        { lesson: "10a", lvl: "TH", q: "Tại sao trên trang chiếu nên sử dụng sự tương phản màu sắc mạnh giữa chữ và nền?", options: ["Để tệp nhẹ hơn", "Để văn bản nổi bật, người ngồi xa cũng có thể đọc được", "Để không vi phạm bản quyền", "Để hình ảnh tự động chạy"], correct: 1, cols: 1 },
+        { lesson: "10a", lvl: "TH", q: "Nguyên tắc nào sau đây SAI khi chọn màu sắc cho bài trình chiếu?", options: ["Chọn màu phù hợp với chủ đề", "Dùng càng nhiều màu trên một trang càng đẹp", "Sử dụng các màu trung tính làm nền", "Tạo sự tương phản giữa chữ và nền"], correct: 1, cols: 1 },
+        { lesson: "10a", lvl: "TH", q: "Tác dụng của việc đánh số trang chiếu trong buổi thuyết trình là gì?", options: ["Giúp máy chiếu hoạt động nhanh hơn", "Giúp người thuyết trình và khán giả dễ dàng theo dõi vị trí nội dung", "Tự động dịch ngôn ngữ", "Thay thế cho hiệu ứng động"], correct: 1, cols: 1 },
+
+        // Bài 11a: Sử dụng bản mẫu cho bài trình chiếu (12 NB, 3 TH - Lấy 4 NB, 1 TH)
+        { lesson: "11a", lvl: "NB", q: "Bản mẫu (Template) trong PowerPoint là gì?", options: ["Là tệp âm thanh nền", "Là một tệp trình chiếu được thiết kế sẵn cấu trúc, định dạng và màu sắc", "Là công cụ vẽ biểu đồ", "Là một phần mềm diệt virus"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Khi khởi động PowerPoint, để tìm kiếm một bản mẫu có sẵn trực tuyến, ta nhập từ khóa vào ô nào?", options: ["Slide name", "Search for online templates and themes", "Find text", "Insert Link"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Lệnh Hyperlink (Siêu liên kết) nằm ở thẻ nào trên thanh Ribbon?", options: ["Home", "Design", "Insert", "Transitions"], correct: 2, cols: 2 },
+        { lesson: "11a", lvl: "NB", q: "Chức năng của Hyperlink trong PowerPoint dùng để làm gì?", options: ["Xóa trang chiếu", "Liên kết một đối tượng tới một trang web, tệp tin hoặc slide khác", "Chỉnh màu cho hình ảnh", "Đánh số thứ tự"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Để chèn một video vào trang chiếu, em chọn lệnh nào?", options: ["Insert > Audio", "Insert > Video", "Insert > Chart", "Insert > Picture"], correct: 1, cols: 2 },
+        { lesson: "11a", lvl: "NB", q: "Slide Master (Trang chiếu chủ) có chức năng gì?", options: ["Quản lý và điều khiển định dạng chung cho toàn bộ các trang chiếu", "Chỉnh sửa video trực tiếp", "Ngăn chặn người khác sao chép tệp", "Kết nối máy in"], correct: 0, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Để mở chế độ Slide Master, ta vào thẻ lệnh nào?", options: ["Home", "View", "Review", "Slide Show"], correct: 1, cols: 2 },
+        { lesson: "11a", lvl: "NB", q: "Khi lưu một bài trình chiếu thành bản mẫu để dùng sau, ta chọn đuôi mở rộng là gì?", options: [".docx", ".xlsx", ".pptx", ".potx"], correct: 3, cols: 2 },
+        { lesson: "11a", lvl: "NB", q: "Trong mục Insert Video, tùy chọn 'This Device...' dùng để làm gì?", options: ["Chèn video từ mạng Internet", "Chèn video đã có sẵn trên máy tính của em", "Xóa video", "Tự động quay video mới"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Phím tắt để mở nhanh hộp thoại chèn Hyperlink là gì?", options: ["Ctrl + H", "Ctrl + K", "Ctrl + L", "Ctrl + P"], correct: 1, cols: 2 },
+        { lesson: "11a", lvl: "NB", q: "Bản mẫu (Template) và Mẫu định dạng (Theme) có giống nhau hoàn toàn không?", options: ["Hoàn toàn giống nhau", "Khác nhau (Template chứa cả bố cục chi tiết và nội dung gợi ý, Theme chỉ chứa màu/font)", "Theme dùng cho Word, Template dùng cho PowerPoint", "Cả hai đều không dùng được cho PowerPoint"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "NB", q: "Cấu trúc của một bản mẫu thường bao gồm?", options: ["Chỉ một trang trắng", "Các trang chiếu với hình nền, phông chữ, và bố cục vị trí chữ/ảnh đã sắp xếp hợp lý", "Chỉ các đoạn video", "Các mã lập trình phức tạp"], correct: 1, cols: 1 },
+        
+        { lesson: "11a", lvl: "TH", q: "Lợi ích lớn nhất của việc sử dụng bản mẫu (Template) là gì?", options: ["Bảo mật tệp tuyệt đối", "Giúp tiết kiệm thời gian thiết kế, đảm bảo bài trình chiếu có bố cục chuyên nghiệp", "Phần mềm sẽ tự động thuyết trình thay con người", "Làm dung lượng tệp nhỏ đi 10 lần"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "TH", q: "Khi ta thay đổi phông chữ tiêu đề trong Slide Master, điều gì sẽ xảy ra?", options: ["Chỉ trang tiêu đề thay đổi", "Toàn bộ các trang chiếu sử dụng layout đó sẽ tự động đổi phông chữ theo", "Chữ sẽ bị xóa mất", "Không có thay đổi nào"], correct: 1, cols: 1 },
+        { lesson: "11a", lvl: "TH", q: "Tại sao nên dùng Hyperlink (Siêu liên kết) trong khi thuyết trình?", options: ["Để mở nhanh một trang web hoặc tài liệu minh họa khác mà không cần thoát khỏi màn hình trình chiếu", "Để máy chiếu không bị tắt đột ngột", "Để đổi màu nền trang chiếu tự động", "Để tính toán các số liệu trong bảng"], correct: 0, cols: 1 }
     ];
 
-    // --- NGÂN HÀNG ĐÚNG/SAI (4 CÂU) ---
+    // --- NGÂN HÀNG ĐÚNG/SAI (12 Câu lớn) ---
+    // Yêu cầu bốc: 1 câu Bài 9a, 1 câu Bài 10a, 2 câu Bài 11a
     const allTfBank = [
-        { title: "Bạn Lan đang soạn thảo một văn bản báo cáo dài 20 trang về \"Dự án Xanh\". Lan muốn trình bày văn bản chuyên nghiệp hơn. [cite: 131, 132]", items: [
-            { text: "a) Lan có thể thêm dòng chữ \"Báo cáo Dự án Xanh\" vào đầu trang (Header) để nó xuất hiện ở mọi trang. [cite: 133]", ans: "D" },
-            { text: "b) Lan chỉ có thể chèn số trang ở vị trí chân trang (Footer), không thể chèn ở đầu trang. [cite: 134]", ans: "S" },
-            { text: "c) Việc đánh số trang giúp người đọc dễ dàng theo dõi và tìm kiếm thông tin trong báo cáo. [cite: 135]", ans: "D" },
-            { text: "d) Lan có thể chèn hình ảnh logo của nhóm vào đầu trang bên cạnh tiêu đề báo cáo. [cite: 136]", ans: "D" }
+        // BÀI 9a: ĐẦU TRANG, CHÂN TRANG (3 Câu)
+        { lesson: "9a", title: "Khái niệm và ứng dụng của đầu trang, chân trang:", items: [
+            { text: "a) Đầu trang (Header) luôn hiển thị ở mép dưới cùng của trang văn bản.", ans: "S" },
+            { text: "b) Có thể gõ họ tên tác giả vào phần chân trang (Footer).", ans: "D" },
+            { text: "c) Đánh số trang giúp người đọc dễ dàng tìm kiếm nội dung trong tài liệu dài.", ans: "D" },
+            { text: "d) Khi xóa phần Footer ở trang số 2, các trang khác vẫn giữ nguyên nội dung Footer.", ans: "S" }
         ]},
-        { title: "Nhóm bạn Minh đang thiết kế bài trình chiếu cho lễ hội văn hóa trường với chủ đề \"Sắc màu dân tộc\". [cite: 137]", items: [
-            { text: "a) Minh nên sử dụng nhiều màu sắc rực rỡ ngẫu nhiên trên cùng một trang chiếu để gây ấn tượng mạnh. [cite: 138]", ans: "S" },
-            { text: "b) Minh nên chọn màu văn bản có độ tương phản cao với màu nền (ví dụ: chữ sáng trên nền tối) để dễ đọc. [cite: 139]", ans: "D" },
-            { text: "c) Để thêm thông tin \"Lễ hội văn hóa\" vào cuối mỗi trang chiếu, Minh sử dụng chức năng Header & Footer. [cite: 140]", ans: "D" },
-            { text: "d) Minh không thể bỏ đánh số trang ở trang tiêu đề (trang đầu tiên) mà bắt buộc phải đánh số từ 1. [cite: 141]", ans: "S" }
+        { lesson: "9a", title: "Thao tác đánh số trang và Header/Footer:", items: [
+            { text: "a) Để thêm số trang, ta vào dải lệnh Design và chọn Page Number.", ans: "S" },
+            { text: "b) Ta có thể thiết lập để trang đầu tiên (trang bìa) không hiển thị số trang.", ans: "D" },
+            { text: "c) Có thể chèn một hình ảnh nhỏ (như logo trường) vào khu vực Header.", ans: "D" },
+            { text: "d) Số trang trong Word chỉ có thể nằm ở chính giữa chân trang, không thể căn lề trái/phải.", ans: "S" }
         ]},
-        { title: "Bạn Hoa muốn tạo một bài trình chiếu giới thiệu về CLB Tin học. Hoa quyết định sử dụng bản mẫu (Template). [cite: 142, 143]", items: [
-            { text: "a) Bản mẫu chỉ chứa bố cục trang chiếu, không bao gồm màu sắc hay phông chữ. [cite: 144]", ans: "S" },
-            { text: "b) Sử dụng bản mẫu giúp Hoa tạo bài trình chiếu nhanh chóng hơn so với việc thiết kế từ đầu. [cite: 145]", ans: "D" },
-            { text: "c) Hoa có thể tìm kiếm các bản mẫu trực tuyến thông qua chức năng Search trong phần mềm trình chiếu. [cite: 146]", ans: "D" },
-            { text: "d) Sau khi chọn bản mẫu, Hoa không thể thay đổi màu sắc hay phông chữ của bản mẫu đó nữa. [cite: 147]", ans: "S" }
+        { lesson: "9a", title: "Hiệu quả trình bày văn bản:", items: [
+            { text: "a) Thông tin trong Header/Footer thường mờ hơn nội dung chính khi đang ở chế độ soạn thảo văn bản.", ans: "D" },
+            { text: "b) Đánh số trang là bắt buộc đối với văn bản chỉ có 1 trang duy nhất.", ans: "S" },
+            { text: "c) Header và Footer giúp văn bản hành chính trông chuyên nghiệp và nhất quán hơn.", ans: "D" },
+            { text: "d) Lệnh 'Top of page' trong công cụ Page Number dùng để đánh số ở dưới cùng của trang.", ans: "S" }
         ]},
-        { title: "Trong bài trình chiếu về \"An toàn phòng thực hành\", Nam muốn minh họa bằng một video có sẵn trên máy tính. [cite: 148]", items: [
-            { text: "a) Nam có thể chèn đường dẫn (Hyperlink) đến tệp video đó vào một hình ảnh hoặc đoạn văn bản trên trang chiếu. [cite: 149]", ans: "D" },
-            { text: "b) Khi trình chiếu, Nam nháy chuột vào đối tượng chứa liên kết thì video sẽ được mở ra. [cite: 150]", ans: "D" },
-            { text: "c) Nam chỉ có thể liên kết đến các trang web, không thể liên kết đến các tệp tin trên máy tính. [cite: 151]", ans: "S" },
-            { text: "d) Nếu Nam sao chép tệp trình chiếu sang máy khác nhưng không sao chép tệp video đi cùng, liên kết có thể bị lỗi. [cite: 152]", ans: "D" }
+
+        // BÀI 10a: ĐỊNH DẠNG NÂNG CAO TRANG CHIẾU (3 Câu)
+        { lesson: "10a", title: "Nguyên tắc phối màu trên trang chiếu:", items: [
+            { text: "a) Nhóm màu nóng (đỏ, cam) thường tạo cảm giác rực rỡ, chú ý.", ans: "D" },
+            { text: "b) Nên sử dụng 10 màu sắc khác nhau trên cùng một trang chiếu để tăng tính thẩm mỹ.", ans: "S" },
+            { text: "c) Để văn bản dễ đọc, màu chữ và màu nền cần có độ tương phản cao (VD: chữ sẫm trên nền sáng).", ans: "D" },
+            { text: "d) Nhóm màu trung tính (trắng, đen, xám) rất khó kết hợp với các màu khác.", ans: "S" }
+        ]},
+        { lesson: "10a", title: "Định dạng phông chữ và cỡ chữ:", items: [
+            { text: "a) Trong bài trình chiếu, chữ nội dung nên để kích thước từ 24pt trở lên để dễ nhìn.", ans: "D" },
+            { text: "b) Nên dùng từ 4 đến 5 phông chữ khác nhau trên cùng một slide để tránh nhàm chán.", ans: "S" },
+            { text: "c) Phông chữ không chân (như Arial, Calibri) thường dễ đọc hơn trên màn hình máy chiếu.", ans: "D" },
+            { text: "d) Tiêu đề trang nên có cỡ chữ nhỏ hơn phần nội dung chi tiết.", ans: "S" }
+        ]},
+        { lesson: "10a", title: "Chèn số trang vào PowerPoint:", items: [
+            { text: "a) Trong hộp thoại Header and Footer, mục 'Slide number' cho phép hiển thị số trang chiếu.", ans: "D" },
+            { text: "b) Tùy chọn 'Don't show on title slide' dùng để ẩn số trang trên trang bìa.", ans: "D" },
+            { text: "c) Lệnh 'Apply to All' chỉ áp dụng việc đánh số trang cho trang đầu tiên.", ans: "S" },
+            { text: "d) Không thể thêm ngày tháng tự động cập nhật vào chân trang chiếu.", ans: "S" }
+        ]},
+
+        // BÀI 11a: SỬ DỤNG BẢN MẪU (6 Câu)
+        { lesson: "11a", title: "Khái niệm và ứng dụng của Bản mẫu (Template):", items: [
+            { text: "a) Template cung cấp sẵn cấu trúc, bố cục màu sắc, phông chữ hợp lý.", ans: "D" },
+            { text: "b) Sử dụng bản mẫu làm mất đi tính chuyên nghiệp của bài thuyết trình.", ans: "S" },
+            { text: "c) Em có thể tải các bản mẫu miễn phí từ thư viện trực tuyến của PowerPoint.", ans: "D" },
+            { text: "d) Sau khi chọn bản mẫu, ta không thể thay đổi nội dung chữ trên đó.", ans: "S" }
+        ]},
+        { lesson: "11a", title: "Môi trường Slide Master (Trang chiếu chủ):", items: [
+            { text: "a) Slide Master dùng để chỉnh sửa định dạng chung cho toàn bộ bài thuyết trình cùng một lúc.", ans: "D" },
+            { text: "b) Để mở Slide Master, ta vào dải lệnh Animations.", ans: "S" },
+            { text: "c) Nếu ta chèn một logo vào Slide Master, logo đó sẽ tự động xuất hiện trên tất cả các slide.", ans: "D" },
+            { text: "d) Bất cứ thay đổi nào trong Slide Master đều không ảnh hưởng đến các slide nội dung.", ans: "S" }
+        ]},
+        { lesson: "11a", title: "Thao tác với Siêu liên kết (Hyperlink):", items: [
+            { text: "a) Hyperlink có thể liên kết một từ khóa đến một trang web trên mạng Internet.", ans: "D" },
+            { text: "b) Phím tắt để tạo Hyperlink là Ctrl + K.", ans: "D" },
+            { text: "c) Không thể dùng Hyperlink để liên kết tới một slide khác trong cùng tệp trình chiếu.", ans: "S" },
+            { text: "d) Chỉ có văn bản mới tạo được Hyperlink, hình ảnh thì không tạo được.", ans: "S" }
+        ]},
+        { lesson: "11a", title: "Chèn Video vào trang chiếu:", items: [
+            { text: "a) Lệnh Insert > Video > This Device... cho phép chèn video từ máy tính.", ans: "D" },
+            { text: "b) Khi chèn video, dung lượng của tệp trình chiếu thường sẽ nặng hơn.", ans: "D" },
+            { text: "c) Video chèn vào PowerPoint không thể điều chỉnh được âm lượng.", ans: "S" },
+            { text: "d) Có thể thiết lập cho video tự động phát (Automatically) ngay khi mở slide.", ans: "D" }
+        ]},
+        { lesson: "11a", title: "Tùy biến bài trình chiếu với Bản mẫu:", items: [
+            { text: "a) Khi áp dụng Template mới, bố cục các hình ảnh cũ có thể tự động thay đổi theo mẫu.", ans: "D" },
+            { text: "b) Không thể lưu bài trình chiếu của mình thành một Template (.potx) mới.", ans: "S" },
+            { text: "c) Sử dụng Template giúp học sinh tiết kiệm thời gian thiết kế giao diện.", ans: "D" },
+            { text: "d) Các Template trực tuyến yêu cầu máy tính phải có kết nối Internet để tải về.", ans: "D" }
+        ]},
+        { lesson: "11a", title: "Tích hợp đa phương tiện và liên kết:", items: [
+            { text: "a) Hyperlink giúp bài thuyết trình linh hoạt hơn khi cần tham chiếu tài liệu bên ngoài.", ans: "D" },
+            { text: "b) Chữ có chứa Hyperlink thường được gạch chân và đổi sang màu xanh lam mặc định.", ans: "D" },
+            { text: "c) Lệnh Online Video dùng để chèn video từ máy tính cá nhân.", ans: "S" },
+            { text: "d) Video trên slide có thể được cắt ngắn (Trim Video) bằng các công cụ tích hợp trong PowerPoint.", ans: "D" }
         ]}
     ];
 
-    // --- NGÂN HÀNG TỰ LUẬN (3 CÂU) ---
+    // --- NGÂN HÀNG TỰ LUẬN (9 CÂU VẬN DỤNG/THÔNG HIỂU) ---
+    // Yêu cầu bốc: Bài 10a (1 TH, 1 VD), Bài 11a (1 VD)
     const allEssayBank = [
-        { text: "Em hãy giải thích vì sao khi thiết kế bài trình chiếu, ta cần chọn màu văn bản có độ tương phản cao với màu nền? Cho một ví dụ về sự kết hợp màu hợp lý. (1.0 điểm) [cite: 154, 155]" },
-        { text: "Giả sử em đang làm một bài trình chiếu báo cáo. Em hãy nêu các bước để thêm nội dung \"Báo cáo Tổng kết\" vào chân trang (Footer) của tất cả các trang chiếu (trừ trang tiêu đề) và đánh số trang cho bài trình chiếu đó. (1.0 điểm) [cite: 156, 157]" },
-        { text: "Bạn An đã tạo một bản mẫu (Template) riêng cho CLB Tin học với logo và màu sắc đặc trưng. Bạn An muốn chia sẻ bản mẫu này cho các thành viên khác để sử dụng. Bạn An cần lưu tệp với phần mở rộng là gì? Khi các thành viên khác mở tệp này để sử dụng, họ có thể chỉnh sửa nội dung cho phù hợp với bài báo cáo cá nhân của họ không? (1.0 điểm) [cite: 158, 159, 160, 161]" }
+        // BÀI 10a (Thông hiểu) - 3 câu
+        { lesson: "10a_TH", text: "Tại sao trong thiết kế bài trình chiếu, việc sử dụng các cặp màu có độ tương phản cao (như chữ đen trên nền trắng, chữ vàng trên nền xanh đậm) lại vô cùng quan trọng? Nêu một ví dụ về cách phối màu không hợp lý gây khó đọc. (1.0 điểm)" },
+        { lesson: "10a_TH", text: "Việc đánh số trang và thêm thông tin ở phần đầu trang/chân trang (Header/Footer) trong PowerPoint mang lại lợi ích gì cho cả người thuyết trình và người theo dõi? (1.0 điểm)" },
+        { lesson: "10a_TH", text: "Màu sắc được chia làm ba nhóm cơ bản: màu nóng, màu lạnh và màu trung tính. Theo em, để bài trình chiếu không bị chói mắt và chuyên nghiệp, chúng ta nên kết hợp các nhóm màu này như thế nào? (1.0 điểm)" },
+        
+        // BÀI 10a (Vận dụng) - 3 câu
+        { lesson: "10a_VD", text: "Em được giao trình bày báo cáo về 'An toàn giao thông'. Hãy nêu các bước thực hiện để chèn dòng chữ 'Tổ 1 - Lớp 8A' vào phần chân trang (Footer) của tất cả các trang chiếu, ngoại trừ trang Tiêu đề đầu tiên? (1.0 điểm)" },
+        { lesson: "10a_VD", text: "Nêu các bước thao tác trên phần mềm PowerPoint để đánh số trang tự động cho toàn bộ bài thuyết trình? Nút lệnh này nằm ở dải lệnh nào? (1.0 điểm)" },
+        { lesson: "10a_VD", text: "Trên trang chiếu của em, dòng chữ tiêu đề đang bị chìm vào hình nền phía sau. Em hãy đề xuất 2 thao tác định dạng (về cỡ chữ, màu sắc hoặc kiểu chữ) để tiêu đề này nổi bật và dễ đọc hơn? (1.0 điểm)" },
+
+        // BÀI 11a (Vận dụng) - 3 câu
+        { lesson: "11a_VD", text: "Em muốn sử dụng một bản mẫu (Template) chủ đề Giáo dục có sẵn trong thư viện trực tuyến của PowerPoint. Em hãy nêu các bước thực hiện để tìm kiếm, tải và áp dụng bản mẫu này cho bài làm của mình? (1.0 điểm)" },
+        { lesson: "11a_VD", text: "Trong bài thuyết trình về 'Lịch sử tự nhiên', em muốn chèn một đoạn video minh họa loài khủng long (tệp video đã lưu sẵn trên máy tính). Hãy mô tả các bước để chèn video này vào trang chiếu? (1.0 điểm)" },
+        { lesson: "11a_VD", text: "Để minh họa cho từ khóa 'Sách giáo khoa điện tử', em muốn tạo một Siêu liên kết (Hyperlink) từ chữ đó mở ra trang web Hành trang số. Hãy nêu các bước tạo Hyperlink cho đoạn chữ này? (1.0 điểm)" }
     ];
 
     // ==========================================
-    // 2. THUẬT TOÁN XÁO TRỘN & BỐC ĐỀ
+    // 2. THUẬT TOÁN XÁO TRỘN & BỐC ĐỀ CHUẨN MA TRẬN TIN 8
     // ==========================================
     function shuffleArray(array) {
         let curId = array.length;
@@ -255,8 +353,15 @@
     let selectedMcq = [], selectedTf = [], selectedEssay = [];
 
     function generateRandomExam() {
-        // Lấy 12 câu Trắc nghiệm khách quan
-        selectedMcq = shuffleArray([...allMcqBank]).slice(0, 12);
+        // 1. RÚT TRẮC NGHIỆM (MCQ) - 12 CÂU
+        let mcq9a_NB = shuffleArray(allMcqBank.filter(q => q.lesson === "9a" && q.lvl === "NB")).slice(0, 2);
+        let mcq10a_NB = shuffleArray(allMcqBank.filter(q => q.lesson === "10a" && q.lvl === "NB")).slice(0, 4);
+        let mcq10a_TH = shuffleArray(allMcqBank.filter(q => q.lesson === "10a" && q.lvl === "TH")).slice(0, 1);
+        let mcq11a_NB = shuffleArray(allMcqBank.filter(q => q.lesson === "11a" && q.lvl === "NB")).slice(0, 4);
+        let mcq11a_TH = shuffleArray(allMcqBank.filter(q => q.lesson === "11a" && q.lvl === "TH")).slice(0, 1);
+        
+        selectedMcq = shuffleArray([...mcq9a_NB, ...mcq10a_NB, ...mcq10a_TH, ...mcq11a_NB, ...mcq11a_TH]);
+
         selectedMcq.forEach(q => {
             let optsWithStatus = q.options.map((text, idx) => ({ text: text, isCorrect: (idx === q.correct) }));
             optsWithStatus = shuffleArray(optsWithStatus);
@@ -264,18 +369,27 @@
             q.correct = optsWithStatus.findIndex(o => o.isCorrect); 
         });
 
-        // Lấy 4 câu Đúng/Sai
-        selectedTf = shuffleArray([...allTfBank]).slice(0, 4);
+        // 2. RÚT ĐÚNG/SAI (T/F) - 4 CÂU
+        let tf9a = shuffleArray(allTfBank.filter(q => q.lesson === "9a"))[0];
+        let tf10a = shuffleArray(allTfBank.filter(q => q.lesson === "10a"))[0];
+        let tf11a_1 = shuffleArray(allTfBank.filter(q => q.lesson === "11a"))[0]; 
+        let tf11a_2 = shuffleArray(allTfBank.filter(q => q.lesson === "11a"))[1]; 
+        
+        selectedTf = shuffleArray([tf9a, tf10a, tf11a_1, tf11a_2]);
 
-        // Lấy 3 câu Tự luận
-        selectedEssay = shuffleArray([...allEssayBank]).slice(0, 3).map(e => e.text); 
+        // 3. RÚT TỰ LUẬN (ESSAY) - 3 CÂU
+        let es10a_TH = shuffleArray(allEssayBank.filter(q => q.lesson === "10a_TH"))[0];
+        let es10a_VD = shuffleArray(allEssayBank.filter(q => q.lesson === "10a_VD"))[0];
+        let es11a_VD = shuffleArray(allEssayBank.filter(q => q.lesson === "11a_VD"))[0];
+        
+        selectedEssay = [es10a_TH.text, es10a_VD.text, es11a_VD.text]; 
     }
 
     // ==========================================
     // 3. GIAO DIỆN & HOẠT ĐỘNG CHUNG
     // ==========================================
     let timeStart = new Date();
-    let duration = 45 * 60; // 45 phút
+    let duration = 45 * 60; 
     let timerInterval;
 
     function encodeUTF8(str) { return btoa(unescape(encodeURIComponent(str || ""))); }
@@ -327,33 +441,32 @@
         let html = "";
         let globalQIndex = 1; 
 
-        // MCQ (12 câu - 3.0đ)
+        // MCQ
         html += `<div class="section-title">I. PHẦN TRẮC NGHIỆM NHIỀU LỰA CHỌN (3.0 ĐIỂM)</div>`;
         selectedMcq.forEach((q, index) => {
             let gridClass = q.cols === 2 ? "grid-2" : "grid-1";
             html += `
             <div class="question-card" id="q-${globalQIndex}">
-                <div class="question-text"><span>Câu ${globalQIndex}:</span> ${q.q.replace(/ \/g, '')}</div>
+                <div class="question-text"><span>Câu ${globalQIndex}:</span> ${q.q}</div>
                 <div class="mcq-options ${gridClass}">`;
             q.options.forEach((opt, optIndex) => {
                 let letter = ["A", "B", "C", "D"][optIndex];
-                let cleanOpt = opt.replace(/ \/g, '');
                 html += `
                     <label class="mcq-option">
                         <input type="radio" name="mcq_${index}" value="${optIndex}" onchange="markAnswered(${globalQIndex})">
-                        <b>${letter}.</b> &nbsp;${cleanOpt}
+                        <b>${letter}.</b> &nbsp;${opt}
                     </label>`;
             });
             html += `</div></div>`;
             globalQIndex++;
         });
 
-        // T/F (4 câu - 4.0đ)
+        // T/F
         html += `<div class="section-title" style="margin-top: 30px;">II. PHẦN TRẮC NGHIỆM ĐÚNG/SAI (4.0 ĐIỂM)</div>`;
         selectedTf.forEach((q, qIndex) => {
             html += `
             <div class="question-card" id="q-${globalQIndex}">
-                <div class="question-text"><span>Câu ${globalQIndex}:</span> ${q.title.replace(/ \/g, '')}</div>
+                <div class="question-text"><span>Câu ${globalQIndex}:</span> ${q.title}</div>
                 <table class="tf-table">
                     <tr>
                         <th class="tf-text">Nội dung ý</th>
@@ -361,11 +474,9 @@
                         <th style="width: 60px;">SAI</th>
                     </tr>`;
             q.items.forEach((item, iIndex) => {
-                let charId = ['a', 'b', 'c', 'd'][iIndex];
-                let cleanText = item.text.replace(/^[abcd]\)\s*/, '').replace(/ \/g, '');
                 html += `
                     <tr>
-                        <td class="tf-text"><b>${charId})</b> ${cleanText}</td>
+                        <td class="tf-text">${item.text}</td>
                         <td><input type="radio" name="tf_${qIndex}_${iIndex}" value="D" class="tf-radio" onchange="markAnswered(${globalQIndex})"></td>
                         <td><input type="radio" name="tf_${qIndex}_${iIndex}" value="S" class="tf-radio" onchange="markAnswered(${globalQIndex})"></td>
                     </tr>`;
@@ -374,13 +485,12 @@
             globalQIndex++;
         });
 
-        // ESSAY (3 câu - 3.0đ)
+        // ESSAY
         html += `<div class="section-title" style="margin-top: 30px;">III. PHẦN TỰ LUẬN (3.0 ĐIỂM)</div>`;
         selectedEssay.forEach((qText, index) => {
-            let cleanQText = qText.replace(/ \/g, '');
             html += `
             <div class="question-card" id="q-${globalQIndex}">
-                <div class="question-text"><span>Câu ${globalQIndex}:</span><br>${cleanQText}</div>
+                <div class="question-text"><span>Câu ${globalQIndex}:</span><br>${qText}</div>
                 <div class="rte-container">
                     <div class="rte-toolbar">
                         <button class="rte-btn" type="button" title="In đậm" onclick="execCmd('bold', '${index}')"><i class="fa-solid fa-bold"></i></button>
@@ -403,7 +513,7 @@
                             <input type="file" accept="image/*" capture="environment" onchange="insertImage(this, '${index}', ${globalQIndex})">
                         </label>
                     </div>
-                    <div class="essay-box" id="essay_${index}" contenteditable="true" placeholder="Nhập câu trả lời của em hoặc tải ảnh chụp thực hành lên đây..." oninput="markAnswered(${globalQIndex}, this.innerHTML)"></div>
+                    <div class="essay-box" id="essay_${index}" contenteditable="true" placeholder="Nhập câu trả lời của em vào đây..." oninput="markAnswered(${globalQIndex}, this.innerHTML)"></div>
                 </div>
             </div>`;
             globalQIndex++;
@@ -483,7 +593,7 @@
         let scoreTF = 0; 
         let answersCodeArray = []; 
 
-        // 1. Chấm điểm MCQ (12 câu, mỗi câu 0.25đ = 3.0 điểm)
+        // 1. Chấm điểm MCQ
         let mcqAnsStr = "";
         selectedMcq.forEach((q, index) => {
             const selected = document.querySelector(`input[name="mcq_${index}"]:checked`);
@@ -494,7 +604,7 @@
         });
         answersCodeArray.push(mcqAnsStr.slice(0, -1));
 
-        // 2. Chấm điểm T/F (4 câu x 4 ý = 16 ý, mỗi ý 0.25đ = 4.0 điểm)
+        // 2. Chấm điểm T/F
         let tfAnsStr = "";
         selectedTf.forEach((q, qIndex) => {
             q.items.forEach((item, iIndex) => {
@@ -508,7 +618,7 @@
         });
         answersCodeArray.push(tfAnsStr.slice(0, -1));
 
-        // 3. Gom Tự luận (3 câu = 3.0 điểm)
+        // 3. Gom Tự luận
         let essayEncodedStr = "";   
         let essayPlainForSheet = ""; 
         
@@ -564,7 +674,7 @@
         }).then(() => {
             sessionStorage.setItem('report_time', timeTakenStr);
             sessionStorage.setItem('report_score_tn', totalScore.toFixed(2));
-            sessionStorage.setItem('report_subject', 'Tin học 8'); 
+            sessionStorage.setItem('report_subject', 'Tin học 8'); // Đã cập nhật thành môn Tin 8
             
             let mcqReportQ = "<tr>", mcqReportA = "<tr>", mcqReportQ2 = "<tr>", mcqReportA2 = "<tr>"; 
             selectedMcq.forEach((q, i) => {
@@ -591,7 +701,6 @@
             selectedEssay.forEach((qText, i) => {
                 let htmlAns = document.getElementById(`essay_${i}`).innerHTML.trim();
                 let tempDiv = document.createElement('div'); tempDiv.innerHTML = htmlAns;
-                let cleanQText = qText.replace(/ \/g, '');
                 if(tempDiv.textContent.trim() === "" && !htmlAns.includes("<img")) htmlAns = "<i>(Bỏ trống)</i>";
                 essayReportHtml += `
                 <div class="essay-item" style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc;">
