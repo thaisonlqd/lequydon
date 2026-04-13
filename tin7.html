@@ -189,134 +189,81 @@
     // ==========================================
     
     const allMcqBank = [
-        // BÀI 11: TẠO BÀI TRÌNH CHIẾU
-        { lesson: 11, lvl: "NB", q: "Chức năng cơ bản nhất của phần mềm trình chiếu là gì?", options: ["Tạo các trang chiếu chứa nội dung văn bản, hình ảnh, âm thanh...", "Tính toán và lập bảng thống kê tự động", "Chỉnh sửa video chuyên nghiệp", "Quản lý cơ sở dữ liệu"], correct: 0, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Trong một bài trình chiếu, trang đầu tiên thường được gọi là gì?", options: ["Trang nội dung", "Trang tiêu đề", "Trang kết luận", "Trang tóm tắt"], correct: 1, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Mỗi trang nội dung thường bắt đầu bằng thành phần nào?", options: ["Hình ảnh minh họa", "Nội dung chi tiết", "Tiêu đề trang", "Bảng biểu"], correct: 2, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Cấu trúc phân cấp trong bài trình chiếu thường được thể hiện bằng cách nào?", options: ["Đổi màu chữ liên tục", "Sử dụng các dấu đầu dòng (Bullet) với mức lề khác nhau", "Sử dụng hiệu ứng âm thanh", "Chèn thật nhiều hình ảnh"], correct: 1, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Phần mềm nào sau đây là phần mềm trình chiếu phổ biến?", options: ["Microsoft Excel", "Microsoft Word", "Microsoft PowerPoint", "Microsoft Paint"], correct: 2, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Trang tiêu đề thường chứa thông tin gì?", options: ["Tên chủ đề bài trình chiếu và tên tác giả", "Toàn bộ nội dung bài học", "Lời cảm ơn khán giả", "Bảng thống kê số liệu"], correct: 0, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Mẫu bố trí (Layout) trang chiếu dùng để làm gì?", options: ["Xóa trang chiếu", "Định dạng sẵn vị trí của tiêu đề, văn bản, hình ảnh trên trang", "Tạo hiệu ứng chuyển động", "Lưu tệp trình chiếu"], correct: 1, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Phím tắt dùng để tạo một trang trình chiếu mới là gì?", options: ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Ctrl + C"], correct: 1, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Để thay đổi mẫu bố trí cho một trang chiếu đã có, ta chọn lệnh nào?", options: ["Home > Layout", "Insert > New Slide", "Design > Themes", "Transitions"], correct: 0, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Mục đích chính của việc dùng cấu trúc phân cấp là gì?", options: ["Làm cho chữ to hơn", "Trình bày thông tin mạch lạc, rõ ràng, dễ hiểu", "Thêm hiệu ứng đẹp mắt", "Tự động dịch ngôn ngữ"], correct: 1, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Để xem trước bài trình chiếu từ trang đầu tiên, ta nhấn phím gì?", options: ["F5", "Shift + F5", "Esc", "Enter"], correct: 0, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Trong cấu trúc phân cấp, thao tác nhấn phím Tab ở đầu dòng sẽ làm gì?", options: ["Tăng mức phân cấp (lùi vào trong)", "Giảm mức phân cấp (đưa ra ngoài)", "Xóa dòng đó", "Tạo trang mới"], correct: 0, cols: 1 },
-
         // BÀI 12: ĐỊNH DẠNG ĐỐI TƯỢNG TRÊN TRANG CHIẾU
-        { lesson: 12, lvl: "NB", q: "Để chèn hình ảnh vào trang chiếu, ta sử dụng dải lệnh nào?", options: ["Home", "Insert", "Design", "Transitions"], correct: 1, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Có thể sao chép văn bản từ phần mềm MS Word sang MS PowerPoint được không?", options: ["Có, nhưng chỉ sao chép được một dòng", "Hoàn toàn có thể", "Không thể sao chép được", "Chỉ sao chép được chữ cái, không sao chép được số"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Thao tác nào dùng để thay đổi kích thước hình ảnh trên trang chiếu?", options: ["Kéo thả các nút tròn ở góc hoặc cạnh của hình ảnh", "Nhấn đúp chuột vào hình ảnh", "Nhấn phím Delete", "Nhấn phím Space"], correct: 0, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Nhóm lệnh Font trên dải lệnh Home dùng để làm gì?", options: ["Chèn hình ảnh", "Định dạng văn bản (phông, cỡ, màu chữ...)", "Tạo hiệu ứng động", "Chọn mẫu bố trí"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Công cụ Theme (mẫu định dạng) nằm ở dải lệnh nào?", options: ["Insert", "Design", "Animations", "View"], correct: 1, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Mẫu định dạng (Theme) cung cấp sẵn những yếu tố nào?", options: ["Chỉ màu nền", "Chỉ phông chữ", "Màu nền, màu chữ, phông chữ và các hiệu ứng trực quan", "Hiệu ứng chuyển trang"], correct: 2, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Để xoay hình ảnh một góc tùy ý, ta sử dụng biểu tượng nào trên hình ảnh?", options: ["Nút tròn ở các góc", "Mũi tên xoay vòng ở cạnh trên hình ảnh", "Nút vuông ở giữa", "Nút tam giác"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Phím tắt dùng để sao chép văn bản là gì?", options: ["Ctrl + X", "Ctrl + V", "Ctrl + C", "Ctrl + P"], correct: 2, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Trong dải lệnh Picture Format, nút lệnh Picture Border dùng để làm gì?", options: ["Tạo hiệu ứng bóng đổ cho ảnh", "Thêm đường viền cho ảnh", "Cắt xén ảnh", "Đổi màu nền trang chiếu"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Tổ hợp phím Ctrl + V dùng để thực hiện lệnh gì?", options: ["Cắt (Cut)", "Sao chép (Copy)", "Dán (Paste)", "Lưu (Save)"], correct: 2, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Lệnh Bring Forward dùng để làm gì đối với các đối tượng hình ảnh bị xếp chồng lên nhau?", options: ["Đưa đối tượng lên trên một lớp", "Đưa đối tượng xuống dưới cùng", "Xóa đối tượng", "Nhân bản đối tượng"], correct: 0, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Hình ảnh đưa vào bài trình chiếu cần phải đảm bảo điều kiện gì về mặt đạo đức?", options: ["Hình ảnh phải thật to", "Hình ảnh phải có bản quyền hoặc nguồn gốc rõ ràng", "Hình ảnh phải tự vẽ", "Hình ảnh phải có nhiều màu sắc"], correct: 1, cols: 1 },
+        { lesson: 12, lvl: "NB", q: "Theo bài học, hình ảnh trong bài trình chiếu thường được dùng để làm gì?", options: ["Minh hoạ cho nội dung, làm bài trình chiếu trực quan và hấp dẫn hơn", "Thay thế hoàn toàn văn bản trên mọi trang chiếu", "Trang trí cho đủ chỗ trống", "Làm cho tệp trình chiếu mở nhanh hơn"], correct: 0, cols: 1 },
+        { lesson: 12, lvl: "NB", q: "Khi lựa chọn hình ảnh cho bài trình chiếu, yêu cầu nào là phù hợp?", options: ["Chỉ cần hình thật nhiều màu sắc", "Hình ảnh phù hợp nội dung và có tính thẩm mĩ", "Lấy bất kì hình nào trên Internet", "Chỉ dùng ảnh chụp bằng điện thoại"], correct: 1, cols: 1 },
+        { lesson: 12, lvl: "NB", q: "Theo ghi nhớ của bài 12, định dạng văn bản trong phần mềm trình chiếu như thế nào?", options: ["Hoàn toàn khác phần mềm soạn thảo", "Tương tự như trong phần mềm soạn thảo", "Chỉ đổi được màu chữ", "Chỉ định dạng được tiêu đề"], correct: 1, cols: 1 },
+        { lesson: 12, lvl: "TH", q: "Muốn chèn hình ảnh vào trang chiếu, em chọn dải lệnh nào trước?", options: ["Home", "Insert", "Design", "View"], correct: 1, cols: 2 },
+        { lesson: 12, lvl: "TH", q: "Bước đầu tiên khi chèn hình ảnh vào trang chiếu là gì?", options: ["Chọn tệp ảnh rồi bấm Insert ngay", "Chọn trang và vị trí trong trang cần chèn hình ảnh", "Mở thẻ Design", "Kéo thả ảnh từ Internet vào"], correct: 1, cols: 1 },
+        { lesson: 12, lvl: "TH", q: "Để thêm đường viền cho hình ảnh, theo bài học em dùng lệnh nào?", options: ["Format > Picture Styles > Picture Border", "Insert > Pictures", "Design > Themes", "Home > Font"], correct: 0, cols: 1 },
+        { lesson: 12, lvl: "TH", q: "Nếu muốn đưa một hình ảnh đang bị che lên lớp trên, em chọn lệnh nào?", options: ["Send Backward", "Bring Forward", "Delete", "Crop"], correct: 1, cols: 2 },
+        { lesson: 12, lvl: "TH", q: "Khi trình bày nội dung văn bản trên một trang chiếu, bài học khuyên em nên:", options: ["Viết thật dài để đủ ý", "Chỉ tập trung vào một ý chính và trình bày cô đọng", "Dùng nhiều phông chữ khác nhau", "Đổi màu từng dòng cho nổi bật"], correct: 1, cols: 1 },
 
-        // BÀI 13: HOÀN THIỆN BÀI TRÌNH CHIẾU
-        { lesson: 13, lvl: "NB", q: "Hiệu ứng động trong PowerPoint được chia làm mấy loại chính?", options: ["1 loại", "2 loại (Chuyển trang và Đối tượng)", "3 loại", "4 loại"], correct: 1, cols: 2 },
-        { lesson: 13, lvl: "NB", q: "Hiệu ứng chuyển trang (Transitions) được áp dụng cho đối tượng nào?", options: ["Từng dòng chữ", "Hình ảnh", "Toàn bộ trang chiếu", "Chỉ trang tiêu đề"], correct: 2, cols: 2 },
-        { lesson: 13, lvl: "NB", q: "Dải lệnh Animations dùng để tạo hiệu ứng cho đối tượng nào?", options: ["Trang chiếu", "Văn bản, hình ảnh trên trang chiếu", "Tệp âm thanh", "Tệp trình chiếu"], correct: 1, cols: 1 },
-        { lesson: 13, lvl: "NB", q: "Hiệu ứng xuất hiện (Entrance) thuộc dải lệnh nào?", options: ["Design", "Transitions", "Animations", "Slide Show"], correct: 2, cols: 2 },
-        { lesson: 13, lvl: "NB", q: "Nhóm hiệu ứng Emphasis trong Animations có biểu tượng màu gì?", options: ["Màu xanh lá cây", "Màu vàng", "Màu đỏ", "Màu xanh dương"], correct: 1, cols: 2 },
-        { lesson: 13, lvl: "NB", q: "Để loại bỏ hiệu ứng chuyển trang, ta chọn lệnh nào trong dải lệnh Transitions?", options: ["None", "Push", "Fade", "Wipe"], correct: 0, cols: 2 },
-        { lesson: 13, lvl: "TH", q: "Mục đích chính của việc sử dụng hiệu ứng động trong bài trình chiếu là gì?", options: ["Làm cho người xem bị phân tâm", "Làm cho bài trình chiếu sinh động, thu hút sự chú ý vào nội dung quan trọng", "Kéo dài thời gian thuyết trình", "Che giấu các lỗi chính tả"], correct: 1, cols: 1 },
-        { lesson: 13, lvl: "TH", q: "Theo nguyên tắc thiết kế, ta nên sử dụng hiệu ứng động như thế nào?", options: ["Càng nhiều hiệu ứng phức tạp càng tốt", "Sử dụng đơn giản, thống nhất và có chọn lọc", "Mỗi trang sử dụng một hiệu ứng chuyển trang khác nhau", "Chỉ dùng hiệu ứng cho hình ảnh, không dùng cho văn bản"], correct: 1, cols: 1 },
-        { lesson: 13, lvl: "TH", q: "Nếu áp dụng quá nhiều hiệu ứng rườm rà cho các dòng chữ liên tiếp nhau, điều gì sẽ xảy ra?", options: ["Bài trình chiếu trở nên chuyên nghiệp hơn", "Người xem sẽ ghi nhớ bài tốt hơn", "Gây mất tập trung và làm người xem rối mắt", "Dung lượng tệp sẽ nhỏ đi"], correct: 2, cols: 1 },
-        { lesson: 13, lvl: "TH", q: "Để bài trình chiếu có tính thống nhất, ta nên:", options: ["Áp dụng cùng một kiểu hiệu ứng chuyển trang cho tất cả các trang", "Mỗi trang dùng một phông chữ khác nhau", "Mỗi trang dùng một màu nền khác nhau", "Không bao giờ dùng hiệu ứng"], correct: 0, cols: 1 },
-        { lesson: 13, lvl: "TH", q: "Đâu là thao tác sắp xếp lại thứ tự xuất hiện của các hiệu ứng đối tượng?", options: ["Dùng lệnh Animation Pane và kéo thả các mục hiệu ứng", "Thay đổi màu chữ của đối tượng", "Đổi mẫu định dạng (Theme) mới", "Dùng dải lệnh View"], correct: 0, cols: 1 },
-        { lesson: 13, lvl: "TH", q: "Sự khác biệt cơ bản giữa Transitions và Animations là gì?", options: ["Transitions dùng cho hình ảnh, Animations dùng cho chữ", "Transitions là hiệu ứng chuyển giao giữa các trang, Animations là hiệu ứng của các đối tượng trên 1 trang", "Không có sự khác biệt", "Transitions chỉ có ở MS Word"], correct: 1, cols: 1 }
+        // BÀI 13: THỰC HÀNH TỔNG HỢP. HOÀN THIỆN BÀI TRÌNH CHIẾU
+        { lesson: 13, lvl: "NB", q: "Bài 13 yêu cầu học sinh biết đưa nội dung nào vào bài trình chiếu một cách hợp lí?", options: ["Hiệu ứng động", "Mã lập trình", "Công thức bảng tính phức tạp", "Video dài 30 phút"], correct: 0, cols: 2 },
+        { lesson: 13, lvl: "NB", q: "Theo phiếu học tập bài 13, có mấy loại hiệu ứng động cần phân biệt?", options: ["Một loại", "Hai loại", "Ba loại", "Bốn loại"], correct: 1, cols: 2 },
+        { lesson: 13, lvl: "NB", q: "Hiệu ứng chuyển trang được áp dụng cho:", options: ["Toàn bộ trang chiếu", "Từng chữ cái trong đoạn văn", "Con trỏ chuột", "Tên tệp trình chiếu"], correct: 0, cols: 2 },
+        { lesson: 13, lvl: "TH", q: "Khi hoàn thiện bài trình chiếu, hiệu ứng chuyển trang nên được sử dụng như thế nào?", options: ["Thống nhất cho tất cả các trang", "Mỗi trang một kiểu khác nhau", "Chỉ dùng cho trang đầu", "Không cần dùng bao giờ"], correct: 0, cols: 1 },
+        { lesson: 13, lvl: "TH", q: "Theo tiêu chí đánh giá ở bài 13, bài trình chiếu tốt cần tránh điều gì?", options: ["Có trang tiêu đề", "Có hình ảnh minh hoạ", "Lạm dụng hiệu ứng", "Sao chép giới thiệu dự án từ văn bản"], correct: 2, cols: 2 },
+        { lesson: 13, lvl: "TH", q: "Theo lưu ý cuối bài 13, âm thanh nên được dùng khi nào?", options: ["Ở mọi lần chuyển trang", "Chỉ khi thật cần thiết", "Bắt buộc cho mọi hiệu ứng", "Chỉ dùng ở trang kết luận"], correct: 1, cols: 2 },
+        { lesson: 13, lvl: "TH", q: "Một tiêu chí của bài trình chiếu hoàn chỉnh trong bài 13 là:", options: ["Có trang tiêu đề, trang nội dung và trang kết luận", "Chỉ cần nhiều hiệu ứng đẹp", "Không cần hình ảnh", "Không cần định dạng nội dung"], correct: 0, cols: 1 },
+        { lesson: 13, lvl: "TH", q: "Mục đích của việc tổng hợp, sắp xếp và bổ sung nội dung ở bài 13 là để:", options: ["Tạo một sản phẩm số hoàn chỉnh", "Làm bài dài hơn", "Giảm số trang chiếu xuống 1", "Chỉ để luyện gõ bàn phím"], correct: 0, cols: 1 },
+
+        // BÀI 14: THUẬT TOÁN TÌM KIẾM TUẦN TỰ
+        { lesson: 14, lvl: "NB", q: "Thuật toán tìm kiếm tuần tự thực hiện tìm như thế nào?", options: ["Chia đôi danh sách mỗi lần", "Tìm lần lượt từ đầu đến cuối danh sách", "Chỉ kiểm tra phần tử cuối", "Chỉ dùng được với số"], correct: 1, cols: 1 },
+        { lesson: 14, lvl: "NB", q: "Theo ghi nhớ bài 14, việc tìm kiếm tuần tự tiếp tục khi nào?", options: ["Khi chưa tìm thấy và chưa tìm hết danh sách", "Khi danh sách đã được sắp xếp", "Chỉ khi có đúng 10 phần tử", "Sau khi tìm thấy rồi vẫn tìm tiếp"], correct: 0, cols: 1 },
+        { lesson: 14, lvl: "NB", q: "Bài 14 yêu cầu học sinh có thể biểu diễn thuật toán tìm kiếm tuần tự bằng:", options: ["Bảng mô phỏng hoặc sơ đồ khối", "Bản nhạc", "Video hoạt hình", "Mạng xã hội"], correct: 0, cols: 1 },
+        { lesson: 14, lvl: "TH", q: "Trong ví dụ mô phỏng tìm khách hàng 'Thanh Trúc', số lần lặp là bao nhiêu?", options: ["2", "3", "4", "5"], correct: 2, cols: 2 },
+        { lesson: 14, lvl: "TH", q: "Khi mô phỏng tìm kiếm tuần tự, điều kiện nào làm vòng lặp dừng lại?", options: ["Đã tìm thấy hoặc đã hết danh sách", "Danh sách có chữ cái", "Phần tử đầu tiên sai", "Máy tính tắt"], correct: 0, cols: 1 },
+        { lesson: 14, lvl: "TH", q: "Bài vận dụng của bài 14 yêu cầu lập danh sách học sinh trong tổ như thế nào?", options: ["Theo thứ tự A đến Z", "Không theo thứ tự A đến Z", "Theo ngày sinh", "Theo chiều cao"], correct: 1, cols: 2 },
+
+        // BÀI 15: THUẬT TOÁN TÌM KIẾM NHỊ PHÂN
+        { lesson: 15, lvl: "NB", q: "Điều kiện quan trọng trước khi thực hiện tìm kiếm nhị phân là gì?", options: ["Danh sách phải có đúng 8 phần tử", "Danh sách phải được sắp xếp", "Danh sách phải là số", "Danh sách phải có màu sắc khác nhau"], correct: 1, cols: 1 },
+        { lesson: 15, lvl: "NB", q: "Trong tìm kiếm nhị phân, sau khi xét phần tử ở giữa, ta làm gì?", options: ["So sánh rồi thu hẹp phạm vi tìm kiếm còn một nửa", "Xét lại từ đầu danh sách", "Xoá toàn bộ nửa đầu danh sách luôn", "Dừng ngay dù chưa tìm thấy"], correct: 0, cols: 1 },
+        { lesson: 15, lvl: "NB", q: "Theo bài 15, sắp xếp giúp cho việc tìm kiếm như thế nào?", options: ["Khó hơn", "Nhanh hơn", "Không thay đổi gì", "Chỉ đẹp mắt hơn"], correct: 1, cols: 2 },
+        { lesson: 15, lvl: "TH", q: "Trong ví dụ tìm tên 'Trúc', thuật toán tìm kiếm nhị phân thực hiện bao nhiêu bước?", options: ["2 bước", "4 bước", "6 bước", "8 bước"], correct: 1, cols: 2 },
+        { lesson: 15, lvl: "TH", q: "Trong ví dụ bài 15, tìm kiếm tuần tự để tìm 'Trúc' phải thực hiện:", options: ["3 bước", "4 bước", "8 bước", "9 bước"], correct: 2, cols: 2 },
+        { lesson: 15, lvl: "TH", q: "Khi tìm tên 'Hòa' trong danh sách đã sắp xếp, sau khi so sánh với 'Mai' và thấy 'Hòa' đứng trước 'Mai', em phải:", options: ["Bỏ nửa trước danh sách", "Bỏ nửa sau danh sách", "Đổi chỗ các tên", "Kết thúc ngay"], correct: 1, cols: 2 },
+        { lesson: 15, lvl: "TH", q: "Theo mô tả trong bài 15, vị trí giữa của nửa trước ở bước tiếp theo khi tìm 'Hòa' là vị trí số:", options: ["2", "3", "4", "5"], correct: 1, cols: 2 },
+        { lesson: 15, lvl: "TH", q: "Nếu danh sách không được sắp xếp thì thuật toán tìm kiếm nhị phân:", options: ["Vẫn luôn thực hiện đúng", "Không thể thu hẹp phạm vi tìm kiếm đúng cách", "Sẽ nhanh hơn tuần tự", "Chỉ sai với dữ liệu chữ"], correct: 1, cols: 1 }
     ];
 
     const allTfBank = [
-        { lesson: 11, title: "Tìm hiểu về cấu trúc bài trình chiếu:", items: [
-            { text: "a) Trang tiêu đề thường là trang đầu tiên, cho biết chủ đề của bài trình chiếu.", ans: "D" },
-            { text: "b) Trang nội dung bắt buộc phải có hình ảnh minh họa.", ans: "S" },
-            { text: "c) Mỗi trang chiếu thường có một tiêu đề trang.", ans: "D" },
-            { text: "d) Cấu trúc phân cấp giúp thông tin được trình bày mạch lạc, rõ ràng.", ans: "D" }
+        { lesson: 12, title: "Bài 12 - Định dạng đối tượng trên trang chiếu", items: [
+            { text: "a) Hình ảnh minh hoạ giúp bài trình chiếu trực quan, ấn tượng và hấp dẫn hơn.", ans: "D" },
+            { text: "b) Hình ảnh dùng trong bài trình chiếu không cần phù hợp với nội dung.", ans: "S" },
+            { text: "c) Định dạng văn bản trong phần mềm trình chiếu tương tự như trong phần mềm soạn thảo.", ans: "D" },
+            { text: "d) Mỗi trang chiếu nên tập trung vào một ý chính và trình bày cô đọng.", ans: "D" }
         ]},
-        { lesson: 11, title: "Thao tác cơ bản trên phần mềm trình chiếu:", items: [
-            { text: "a) Tổ hợp phím Ctrl + M dùng để lưu bài trình chiếu.", ans: "S" },
-            { text: "b) Layout là các mẫu bố trí nội dung đã được thiết kế sẵn.", ans: "D" },
-            { text: "c) Để thêm mức phân cấp (lùi đầu dòng), ta nhấn phím Tab.", ans: "D" },
-            { text: "d) Không thể thay đổi Layout của một trang chiếu sau khi đã tạo.", ans: "S" }
+        { lesson: 13, title: "Bài 13 - Hoàn thiện bài trình chiếu", items: [
+            { text: "a) Bài trình chiếu hoàn chỉnh có thể có trang tiêu đề, các trang nội dung và trang kết luận.", ans: "D" },
+            { text: "b) Dùng càng nhiều hiệu ứng thì bài trình chiếu càng hiệu quả.", ans: "S" },
+            { text: "c) Hiệu ứng chuyển trang nên được dùng thống nhất cho tất cả các trang.", ans: "D" },
+            { text: "d) Âm thanh chỉ nên dùng khi thật cần thiết.", ans: "D" }
         ]},
-        { lesson: 11, title: "Phân tích cấu trúc phân cấp:", items: [
-            { text: "a) Cấu trúc phân cấp chỉ cho phép tối đa 2 mức.", ans: "S" },
-            { text: "b) Nhấn Shift + Tab để giảm mức phân cấp (đưa nội dung ra lề trái).", ans: "D" },
-            { text: "c) Kí hiệu đầu dòng (bullet) của các mức phân cấp khác nhau thường giống hệt nhau.", ans: "S" },
-            { text: "d) Sử dụng cấu trúc phân cấp giúp người xem dễ nắm bắt các ý chính và ý phụ.", ans: "D" }
+        { lesson: 14, title: "Bài 14 - Thuật toán tìm kiếm tuần tự", items: [
+            { text: "a) Tìm kiếm tuần tự thực hiện kiểm tra lần lượt từ đầu đến cuối danh sách.", ans: "D" },
+            { text: "b) Thuật toán tìm kiếm tuần tự chỉ dùng được khi danh sách đã sắp xếp.", ans: "S" },
+            { text: "c) Việc tìm kiếm dừng lại khi đã tìm thấy hoặc đã tìm hết danh sách.", ans: "D" },
+            { text: "d) Bài 14 yêu cầu học sinh lập được bảng mô phỏng thuật toán.", ans: "D" }
         ]},
-        { lesson: 12, title: "Định dạng văn bản và hình ảnh:", items: [
-            { text: "a) Ta có thể sao chép một đoạn văn từ Word và dán (Paste) vào PowerPoint.", ans: "D" },
-            { text: "b) Không thể thay đổi màu sắc của chữ trên trang chiếu.", ans: "S" },
-            { text: "c) Hình ảnh chèn vào trang chiếu có thể phóng to, thu nhỏ tùy ý.", ans: "D" },
-            { text: "d) Mẫu định dạng (Theme) chỉ thay đổi màu nền, không làm thay đổi phông chữ.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Nguyên tắc thiết kế trang chiếu:", items: [
-            { text: "a) Nên đưa toàn bộ đoạn văn bản dài vào một trang chiếu để người xem tự đọc.", ans: "S" },
-            { text: "b) Màu chữ và màu nền nên có độ tương phản cao để dễ nhìn (VD: nền tối - chữ sáng).", ans: "D" },
-            { text: "c) Hình ảnh minh họa cần phù hợp với nội dung bài thuyết trình.", ans: "D" },
-            { text: "d) Lấy bất kỳ hình ảnh nào trên Internet đưa vào bài trình chiếu cũng không vi phạm bản quyền.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Sử dụng mẫu định dạng (Theme):", items: [
-            { text: "a) Theme giúp bài trình chiếu có định dạng thống nhất, chuyên nghiệp một cách nhanh chóng.", ans: "D" },
-            { text: "b) Lệnh chọn Theme nằm trong dải lệnh Design.", ans: "D" },
-            { text: "c) Mỗi tệp trình chiếu chỉ được phép sử dụng một Theme mặc định duy nhất (Office Theme).", ans: "S" },
-            { text: "d) Khi đổi Theme, vị trí các hộp văn bản có thể tự động thay đổi theo mẫu mới.", ans: "D" }
-        ]},
-        { lesson: 12, title: "Thao tác với đối tượng hình ảnh:", items: [
-            { text: "a) Có thể tạo đường viền (Border) cho hình ảnh để hình ảnh nổi bật hơn.", ans: "D" },
-            { text: "b) Nút lệnh Send Backward dùng để đưa hình ảnh lên lớp trên cùng.", ans: "S" },
-            { text: "c) Khi thu nhỏ hình ảnh, ta nên kéo các góc để ảnh không bị méo tỉ lệ.", ans: "D" },
-            { text: "d) Phần mềm trình chiếu không hỗ trợ việc xoay (Rotate) hình ảnh.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Thực hành chèn đối tượng:", items: [
-            { text: "a) Lệnh Insert > Pictures dùng để chèn hình ảnh vào trang chiếu.", ans: "D" },
-            { text: "b) Văn bản được sao chép từ ngoài vào luôn luôn bị mất định dạng ban đầu.", ans: "S" },
-            { text: "c) Việc lựa chọn phông chữ đơn giản, dễ đọc (như Arial, Calibri) là rất cần thiết.", ans: "D" },
-            { text: "d) Một trang chiếu chứa càng nhiều hình ảnh thì càng đẹp và chuẩn khoa học.", ans: "S" }
-        ]},
-        { lesson: 13, title: "Hiệu ứng động trong trình chiếu:", items: [
-            { text: "a) Hiệu ứng động làm bài trình chiếu trở nên hấp dẫn hơn.", ans: "D" },
-            { text: "b) Transitions là hiệu ứng áp dụng cho các dòng chữ bên trong trang chiếu.", ans: "S" },
-            { text: "c) Animations là dải lệnh dùng để tạo hiệu ứng cho các đối tượng (chữ, ảnh).", ans: "D" },
-            { text: "d) Nên áp dụng hiệu ứng âm thanh (tiếng pháo tay, tiếng nổ) cho mỗi lần chuyển trang.", ans: "S" }
-        ]},
-        { lesson: 13, title: "Nguyên tắc sử dụng hiệu ứng:", items: [
-            { text: "a) Hiệu ứng chuyển trang nên được sử dụng thống nhất cho toàn bộ bài trình chiếu.", ans: "D" },
-            { text: "b) Sử dụng hiệu ứng xuất hiện từ từ cho từng dòng chữ sẽ giúp người xem dễ theo dõi nội dung.", ans: "D" },
-            { text: "c) Càng dùng nhiều kiểu hiệu ứng nhấp nháy phức tạp thì bài thuyết trình càng thành công.", ans: "S" },
-            { text: "d) Hiệu ứng động có thể điều chỉnh để tự động xuất hiện hoặc xuất hiện khi click chuột.", ans: "D" }
-        ]},
-        { lesson: 13, title: "Thao tác tạo hiệu ứng:", items: [
-            { text: "a) Để gỡ bỏ hiệu ứng của đối tượng, ta chọn đối tượng rồi nhấn phím Delete trên bàn phím.", ans: "S" },
-            { text: "b) Bảng Animation Pane cho phép ta xem danh sách và chỉnh sửa thứ tự các hiệu ứng.", ans: "D" },
-            { text: "c) Lệnh Apply To All trong thẻ Transitions giúp áp dụng một hiệu ứng chuyển trang cho tất cả các slide.", ans: "D" },
-            { text: "d) Nhóm hiệu ứng Entrance (màu xanh lá) dùng để làm đối tượng biến mất khỏi màn hình.", ans: "S" }
-        ]},
-        { lesson: 13, title: "Hoàn thiện bài trình chiếu:", items: [
-            { text: "a) Trước khi trình chiếu chính thức, ta cần rà soát lại lỗi chính tả và hiệu ứng.", ans: "D" },
-            { text: "b) Hiệu ứng động tốt là hiệu ứng không làm người xem phân tâm khỏi nội dung chính.", ans: "D" },
-            { text: "c) Trong thẻ Animations, lệnh Start: On Click nghĩa là hiệu ứng tự động chạy cùng lúc với hiệu ứng trước.", ans: "S" },
-            { text: "d) Có thể thiết lập thời gian chạy nhanh hay chậm cho một hiệu ứng (Duration).", ans: "D" }
+        { lesson: 15, title: "Bài 15 - Thuật toán tìm kiếm nhị phân", items: [
+            { text: "a) Trước khi tìm kiếm nhị phân, danh sách cần được sắp xếp.", ans: "D" },
+            { text: "b) Tìm kiếm nhị phân luôn xét phần tử ở đầu danh sách trước.", ans: "S" },
+            { text: "c) Sau mỗi lần so sánh, phạm vi tìm kiếm của tìm kiếm nhị phân được thu hẹp lại.", ans: "D" },
+            { text: "d) Sắp xếp giúp việc tìm kiếm được thực hiện nhanh hơn.", ans: "D" }
         ]}
     ];
 
     const allEssayBank = [
-        { lesson: 11, text: "Em được giao nhiệm vụ tạo một bài trình chiếu giới thiệu về 'Lịch sử phát triển máy tính'. Hãy nêu nội dung em dự định trình bày trên Trang tiêu đề và thiết kế cấu trúc phân cấp (gồm ý chính và ý phụ) cho 1 trang nội dung giới thiệu về 'Các thế hệ máy tính'? (1.0 điểm)" },
-        { lesson: 11, text: "Nêu các bước thực hiện để thêm một trang chiếu mới và thay đổi mẫu bố trí (Layout) của trang chiếu đó thành dạng 'Title and Content' (Tiêu đề và nội dung)? Vì sao phải sử dụng đúng mẫu bố trí? (1.0 điểm)" },
-        { lesson: 11, text: "Cho một đoạn văn bản tóm tắt chưa được định dạng. Em hãy mô tả thao tác để chuyển đổi đoạn văn bản đó thành danh sách có cấu trúc phân cấp (Sử dụng lệnh Bullet và phím Tab) trên phần mềm MS PowerPoint? (1.0 điểm)" },
-        { lesson: 12, text: "Trong bài thuyết trình về 'Bảo vệ môi trường', em muốn chèn một bức ảnh minh họa và tạo đường viền (Border) màu xanh lá cây cho bức ảnh đó. Em hãy trình bày các bước thực hiện chi tiết? (1.0 điểm)" },
-        { lesson: 12, text: "Giả sử em có một đoạn văn bản tóm tắt nội dung trong tệp MS Word. Hãy trình bày thao tác sao chép đoạn văn bản đó sang MS PowerPoint và nêu 2 nguyên tắc cần lưu ý khi định dạng lại đoạn văn bản đó trên trang chiếu (về phông chữ, cỡ chữ, màu sắc...)? (1.0 điểm)" },
-        { lesson: 12, text: "Mẫu định dạng (Theme) là gì? Hãy nêu các bước áp dụng một mẫu định dạng có sẵn cho bài trình chiếu của em. Tại sao việc sử dụng Theme lại giúp bài trình chiếu trở nên chuyên nghiệp hơn? (1.0 điểm)" },
-        { lesson: 13, text: "Để thu hút sự chú ý của khán giả vào một dòng chữ quan trọng trên màn hình, em sẽ sử dụng nhóm hiệu ứng động nào (Entrance, Emphasis hay Exit)? Hãy trình bày các bước áp dụng hiệu ứng đó. (1.0 điểm)" },
-        { lesson: 13, text: "Em hãy nêu sự khác nhau cơ bản giữa hiệu ứng chuyển trang (Transitions) và hiệu ứng đối tượng (Animations)? Trình bày các bước để áp dụng hiệu ứng chuyển trang 'Fade' cho toàn bộ các trang trong bài thuyết trình. (1.0 điểm)" },
-        { lesson: 13, text: "Một bạn học sinh thêm rất nhiều hiệu ứng chữ bay nhảy, xoay vòng lộn xộn vào bài trình chiếu với mong muốn làm bài sinh động hơn. Theo em, điều này có vi phạm nguyên tắc sử dụng hiệu ứng không? Vì sao? Em có lời khuyên gì cho bạn? (1.0 điểm)" }
+        { lesson: 12, text: "Em hãy trình bày các bước chèn một hình ảnh vào trang chiếu và nêu thêm các bước tạo đường viền cho hình ảnh đó theo bài 12. (1.0 điểm)" },
+        { lesson: 12, text: "Từ nội dung bài 12, em hãy nêu 3 lưu ý khi định dạng văn bản trên trang chiếu để làm nổi bật thông điệp chính. (1.0 điểm)" },
+        { lesson: 13, text: "Theo bài 13, em hãy phân biệt hiệu ứng động cho đối tượng và hiệu ứng chuyển trang. Vì sao không nên lạm dụng hiệu ứng trong bài trình chiếu? (1.0 điểm)" },
+        { lesson: 13, text: "Dựa vào tiêu chí đánh giá của bài 13, em hãy nêu những thành phần cần có để hoàn thiện một bài trình chiếu báo cáo dự án 'Trường học xanh'. (1.0 điểm)" },
+        { lesson: 14, text: "Em hãy mô tả thuật toán tìm kiếm tuần tự bằng lời và nêu điều kiện để việc tìm kiếm dừng lại. (1.0 điểm)" },
+        { lesson: 14, text: "Trong ví dụ tìm khách hàng 'Thanh Trúc', em hãy giải thích vì sao thuật toán phải lặp 4 lần mới tìm thấy. (1.0 điểm)" },
+        { lesson: 15, text: "Em hãy giải thích vì sao danh sách phải được sắp xếp trước khi thực hiện tìm kiếm nhị phân. Nếu không sắp xếp thì điều gì xảy ra? (1.0 điểm)" },
+        { lesson: 15, text: "Dựa vào ví dụ trong bài 15, em hãy mô tả các bước tìm tên 'Hòa' bằng thuật toán tìm kiếm nhị phân. (1.0 điểm)" }
     ];
 
     // ==========================================
@@ -335,36 +282,30 @@
     let selectedMcq = [], selectedTf = [], selectedEssay = [];
 
     function generateRandomExam() {
-        // 1. RÚT TRẮC NGHIỆM (MCQ) - Theo đúng ma trận
-        let mcq11_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 11 && q.lvl === "NB")).slice(0, 4);
-        let mcq12_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 12 && q.lvl === "NB")).slice(0, 4);
-        let mcq13_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 13 && q.lvl === "NB")).slice(0, 2);
-        let mcq13_TH = shuffleArray(allMcqBank.filter(q => q.lesson === 13 && q.lvl === "TH")).slice(0, 2);
-        
-        selectedMcq = shuffleArray([...mcq11_NB, ...mcq12_NB, ...mcq13_NB, ...mcq13_TH]);
+        // 1. RÚT TRẮC NGHIỆM - phủ đủ 4 bài 12, 13, 14, 15
+        const lessons = [12, 13, 14, 15];
+        selectedMcq = shuffleArray([].concat(...lessons.map(lesson =>
+            shuffleArray(allMcqBank.filter(q => q.lesson === lesson)).slice(0, 3)
+        )));
 
         // Đảo phương án MCQ
         selectedMcq.forEach(q => {
             let optsWithStatus = q.options.map((text, idx) => ({ text: text, isCorrect: (idx === q.correct) }));
             optsWithStatus = shuffleArray(optsWithStatus);
             q.options = optsWithStatus.map(o => o.text);
-            q.correct = optsWithStatus.findIndex(o => o.isCorrect); 
+            q.correct = optsWithStatus.findIndex(o => o.isCorrect);
         });
 
-        // 2. RÚT ĐÚNG/SAI (T/F) - 4 câu
-        let tf11 = shuffleArray(allTfBank.filter(q => q.lesson === 11))[0];
-        let tf12_1 = shuffleArray(allTfBank.filter(q => q.lesson === 12))[0];
-        let tf12_2 = shuffleArray(allTfBank.filter(q => q.lesson === 12))[1]; 
-        let tf13 = shuffleArray(allTfBank.filter(q => q.lesson === 13))[0];
-        
-        selectedTf = shuffleArray([tf11, tf12_1, tf12_2, tf13]);
+        // 2. RÚT ĐÚNG/SAI - mỗi bài 1 câu
+        selectedTf = shuffleArray([12, 13, 14, 15].map(lesson => allTfBank.find(q => q.lesson === lesson)));
 
-        // 3. RÚT TỰ LUẬN (ESSAY) - 3 câu
-        let es11 = shuffleArray(allEssayBank.filter(q => q.lesson === 11))[0];
-        let es12 = shuffleArray(allEssayBank.filter(q => q.lesson === 12))[0];
-        let es13 = shuffleArray(allEssayBank.filter(q => q.lesson === 13))[0];
-        
-        selectedEssay = [es11.text, es12.text, es13.text]; 
+        // 3. RÚT TỰ LUẬN - chọn ngẫu nhiên 4 câu từ 4 bài
+        selectedEssay = shuffleArray([
+            shuffleArray(allEssayBank.filter(q => q.lesson === 12))[0],
+            shuffleArray(allEssayBank.filter(q => q.lesson === 13))[0],
+            shuffleArray(allEssayBank.filter(q => q.lesson === 14))[0],
+            shuffleArray(allEssayBank.filter(q => q.lesson === 15))[0]
+        ]).map(q => q.text);
     }
 
     // ==========================================
@@ -470,7 +411,7 @@
         });
 
         // RENDER ESSAY
-        html += `<div class="section-title" style="margin-top: 30px;">III. PHẦN TỰ LUẬN (3.0 ĐIỂM)</div>`;
+        html += `<div class="section-title" style="margin-top: 30px;">III. PHẦN TỰ LUẬN</div>`;
         selectedEssay.forEach((qText, index) => {
             html += `
             <div class="question-card" id="q-${globalQIndex}">
