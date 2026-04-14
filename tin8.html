@@ -190,53 +190,53 @@
     
     // --- NGÂN HÀNG MCQ (12 CÂU) ---
     const allMcqBank = [
-        { q: "Trong phần mềm soạn thảo văn bản, phần trên cùng của trang văn bản được gọi là gì?", options: ["Chân trang (Footer).", "Đầu trang (Header).", "Lề trang (Margin).", "Thân trang (Body)."], correct: 1, cols: 2 },
-        { q: "Khi đánh số trang trong văn bản, ta có thể đặt số trang ở vị trí nào?", options: ["Chỉ ở đầu trang.", "Chỉ ở chân trang.", "Đầu trang hoặc chân trang.", "Chỉ ở lề trái."], correct: 2, cols: 2 },
-        { q: "Trong phần mềm trình chiếu, để định dạng màu sắc cho văn bản, ta sử dụng nhóm lệnh nào trên thẻ Home?", options: ["Paragraph.", "Drawing.", "Font.", "Editing."], correct: 2, cols: 2 },
-        { q: "Lệnh nào sau đây được sử dụng để đánh số thứ tự cho các trang chiếu?", options: ["Insert / Slide Number.", "Design / Slide Number.", "View / Slide Number.", "Home / Numbering."], correct: 0, cols: 2 },
-        { q: "Trong hộp thoại Header and Footer của phần mềm trình chiếu, tùy chọn \"Apply to All\" có ý nghĩa gì?", options: ["Áp dụng cho trang chiếu hiện tại.", "Áp dụng cho tất cả các trang chiếu.", "Áp dụng cho trang tiêu đề.", "Áp dụng cho trang cuối cùng."], correct: 1, cols: 2 },
-        { q: "Thông tin ở đầu trang và chân trang trong bài trình chiếu thường bao gồm những gì?", options: ["Tên người trình bày, số trang, ngày trình bày.", "Video và âm thanh.", "Biểu đồ và hình ảnh động.", "Hiệu ứng chuyển trang."], correct: 0, cols: 1 },
-        { q: "Theo nguyên tắc phối màu, nhóm màu nào sau đây mang lại cảm giác ấm áp, phấn chấn?", options: ["Màu lạnh (Xanh, Tím).", "Màu trung tính (Trắng, Đen).", "Màu nóng (Đỏ, Cam, Vàng).", "Màu Pastel."], correct: 2, cols: 2 },
-        { q: "Bản mẫu (Template) trong phần mềm trình chiếu là gì?", options: ["Một tệp văn bản chứa nội dung thuyết trình.", "Một bản thiết kế sẵn về bố cục, màu sắc, phông chữ.", "Một hình ảnh nền cho trang chiếu.", "Một video hướng dẫn sử dụng phần mềm."], correct: 1, cols: 1 },
-        { q: "Để tạo một bài trình chiếu mới từ bản mẫu có sẵn, ta thực hiện thao tác nào?", options: ["File/Open.", "File/Save.", "File/New.", "File/Print."], correct: 2, cols: 2 },
-        { q: "Phần mở rộng của tệp bản mẫu trong PowerPoint là gì?", options: [".pptx", ".docx", ".potx", ".xlsx"], correct: 2, cols: 2 },
-        { q: "Lợi ích chính của việc sử dụng bản mẫu (Template) là gì?", options: ["Giúp tiết kiệm thời gian và tạo giao diện thống nhất, chuyên nghiệp.", "Tự động soạn thảo nội dung chi tiết cho bài thuyết trình.", "Giúp máy tính chạy nhanh hơn khi trình chiếu.", "Ngăn chặn việc sao chép nội dung bài trình chiếu."], correct: 0, cols: 1 },
-        { q: "Để chèn liên kết (Hyperlink) đến một trang web hoặc tệp tin khác trong trang chiếu, ta chọn đối tượng rồi nhấn chuột phải và chọn:", options: ["Copy.", "Format Picture.", "Link (hoặc Hyperlink).", "Bring to Front."], correct: 2, cols: 2 }
+        { q: "Theo bài học, văn bản trên trang chiếu nên có đặc điểm nào sau đây?", options: ["Dài, đầy đủ mọi chi tiết.", "Ngắn gọn, hình thức thu hút, cỡ chữ to.", "Chỉ gồm hình ảnh, không cần chữ.", "Viết đầy đủ mọi thành phần của câu."], correct: 1, cols: 1 },
+        { q: "Khi tạo bài trình chiếu, việc lựa chọn màu sắc và cỡ chữ cần bảo đảm điều gì?", options: ["Càng nhiều màu càng tốt.", "Hài hoà và hợp lí với nội dung.", "Chỉ dùng màu tối.", "Chỉ dùng cỡ chữ thật nhỏ."], correct: 1, cols: 2 },
+        { q: "Theo Bài 10a, trong bài trình chiếu có thể thêm những thành phần nào sau đây?", options: ["Số trang, đầu trang và chân trang.", "Chỉ có số trang.", "Chỉ có đầu trang.", "Chỉ có chân trang."], correct: 0, cols: 2 },
+        { q: "Bản mẫu (Template) trong phần mềm trình chiếu là gì?", options: ["Một đoạn video minh hoạ.", "Một bản thiết kế của một hoặc một nhóm các trang chiếu.", "Một tệp âm thanh dùng trong trình chiếu.", "Một hình nền duy nhất của trang chiếu."], correct: 1, cols: 1 },
+        { q: "Phần mở rộng của tệp bản mẫu được nêu trong tài liệu là gì?", options: [".pptx", ".potx", ".docx", ".xlsx"], correct: 1, cols: 2 },
+        { q: "Lợi ích của việc sử dụng bản mẫu là gì?", options: ["Làm bài trình chiếu thống nhất, chuyên nghiệp mà không tốn nhiều thời gian.", "Bắt buộc học sinh không được chỉnh sửa nội dung.", "Chỉ dùng để đổi màu nền trang chiếu.", "Chỉ dùng để chèn âm thanh."], correct: 0, cols: 1 },
+        { q: "Trong bài thực hành về \"An toàn trong phòng thực hành\", học sinh cần đưa gì vào trang tiêu đề?", options: ["Một trò chơi trực tuyến.", "Đường dẫn đến một video hay tài liệu khác.", "Bảng tính Excel.", "Mã nguồn chương trình."], correct: 1, cols: 2 },
+        { q: "Theo Bài 12, chương trình là gì?", options: ["Một tệp lưu hình ảnh.", "Dãy các lệnh điều khiển máy tính thực hiện một thuật toán.", "Một bản tóm tắt nội dung bài học.", "Danh sách thiết bị trong phòng máy."], correct: 1, cols: 1 },
+        { q: "Khi điều khiển nhân vật đi theo đường đi là tam giác đều, góc quay sau mỗi cạnh là bao nhiêu?", options: ["60 độ", "90 độ", "120 độ", "180 độ"], correct: 2, cols: 2 },
+        { q: "Đối với hình vuông, số đo góc quay được nêu trong tài liệu là bao nhiêu?", options: ["45 độ", "60 độ", "90 độ", "120 độ"], correct: 2, cols: 2 },
+        { q: "Trong Scratch, theo tài liệu, có mấy kiểu dữ liệu cơ bản được học ở bài \"Biểu diễn dữ liệu\"?", options: ["2 kiểu: số và văn bản.", "3 kiểu: số, xâu kí tự và lôgic.", "4 kiểu: số, ngày tháng, công thức, hình ảnh.", "5 kiểu."], correct: 1, cols: 1 },
+        { q: "Biến được dùng để làm gì?", options: ["Lưu trữ giá trị không đổi trong suốt chương trình.", "Lưu trữ giá trị có thể thay đổi trong quá trình thực hiện chương trình.", "Chỉ lưu hình ảnh trong Scratch.", "Chỉ lưu tên của nhân vật."], correct: 1, cols: 1 }
     ];
 
     // --- NGÂN HÀNG ĐÚNG/SAI (4 CÂU) ---
     const allTfBank = [
-        { title: "Bạn Lan đang soạn thảo một văn bản báo cáo dài 20 trang về \"Dự án Xanh\". Lan muốn trình bày văn bản chuyên nghiệp hơn.", items: [
-            { text: "a) Lan có thể thêm dòng chữ \"Báo cáo Dự án Xanh\" vào đầu trang (Header) để nó xuất hiện ở mọi trang.", ans: "D" },
-            { text: "b) Lan chỉ có thể chèn số trang ở vị trí chân trang (Footer), không thể chèn ở đầu trang.", ans: "S" },
-            { text: "c) Việc đánh số trang giúp người đọc dễ dàng theo dõi và tìm kiếm thông tin trong báo cáo.", ans: "D" },
-            { text: "d) Lan có thể chèn hình ảnh logo của nhóm vào đầu trang bên cạnh tiêu đề báo cáo.", ans: "D" }
+        { title: "Xét các nhận định về bài học \"Định dạng nâng cao cho trang chiếu\".", items: [
+            { text: "a) Văn bản trên trang chiếu nên ngắn gọn, không cần quá chi tiết.", ans: "D" },
+            { text: "b) Khi tạo bài trình chiếu, có thể bỏ qua hoàn toàn hình thức và cách trình bày.", ans: "S" },
+            { text: "c) Có thể đánh số trang, thêm đầu trang và chân trang vào bài trình chiếu.", ans: "D" },
+            { text: "d) Khi chọn màu sắc trên trang chiếu, cần chú ý sự phối hợp giữa màu nền và màu chữ.", ans: "D" }
         ]},
-        { title: "Nhóm bạn Minh đang thiết kế bài trình chiếu cho lễ hội văn hóa trường với chủ đề \"Sắc màu dân tộc\".", items: [
-            { text: "a) Minh nên sử dụng nhiều màu sắc rực rỡ ngẫu nhiên trên cùng một trang chiếu để gây ấn tượng mạnh.", ans: "S" },
-            { text: "b) Minh nên chọn màu văn bản có độ tương phản cao với màu nền (ví dụ: chữ sáng trên nền tối) để dễ đọc.", ans: "D" },
-            { text: "c) Để thêm thông tin \"Lễ hội văn hóa\" vào cuối mỗi trang chiếu, Minh sử dụng chức năng Header & Footer.", ans: "D" },
-            { text: "d) Minh không thể bỏ đánh số trang ở trang tiêu đề (trang đầu tiên) mà bắt buộc phải đánh số từ 1.", ans: "S" }
+        { title: "Xét các nhận định về bài học \"Sử dụng bản mẫu tạo bài trình chiếu\".", items: [
+            { text: "a) Bản mẫu chứa bố cục, màu sắc, phông chữ, hiệu ứng, kiểu nền và có thể cả nội dung.", ans: "D" },
+            { text: "b) Sau khi chọn bản mẫu, học sinh không thể chỉnh sửa lại cho phù hợp nội dung.", ans: "S" },
+            { text: "c) Trong bài thực hành, học sinh phải đưa vào trang tiêu đề đường dẫn đến một video hay tài liệu khác.", ans: "D" },
+            { text: "d) Theo hướng dẫn, có thể lưu bài trình chiếu với tên AnToanPhongThucHanh.pptx.", ans: "D" }
         ]},
-        { title: "Bạn Hoa muốn tạo một bài trình chiếu giới thiệu về CLB Tin học. Hoa quyết định sử dụng bản mẫu (Template).", items: [
-            { text: "a) Bản mẫu chỉ chứa bố cục trang chiếu, không bao gồm màu sắc hay phông chữ.", ans: "S" },
-            { text: "b) Sử dụng bản mẫu giúp Hoa tạo bài trình chiếu nhanh chóng hơn so với việc thiết kế từ đầu.", ans: "D" },
-            { text: "c) Hoa có thể tìm kiếm các bản mẫu trực tuyến thông qua chức năng Search trong phần mềm trình chiếu.", ans: "D" },
-            { text: "d) Sau khi chọn bản mẫu, Hoa không thể thay đổi màu sắc hay phông chữ của bản mẫu đó nữa.", ans: "S" }
+        { title: "Xét các nhận định về bài học \"Từ thuật toán đến chương trình\".", items: [
+            { text: "a) Chương trình là dãy các lệnh điều khiển máy tính thực hiện một thuật toán.", ans: "D" },
+            { text: "b) Với tam giác đều, nhân vật quay trái 120 độ sau khi đi hết một cạnh.", ans: "D" },
+            { text: "c) Với hình vuông, góc quay được nêu trong tài liệu là 120 độ.", ans: "S" },
+            { text: "d) Khi khái quát hình đa giác đều n cạnh, góc quay có thể tính bằng 360/n.", ans: "D" }
         ]},
-        { title: "Trong bài trình chiếu về \"An toàn phòng thực hành\", Nam muốn minh họa bằng một video có sẵn trên máy tính.", items: [
-            { text: "a) Nam có thể chèn đường dẫn (Hyperlink) đến tệp video đó vào một hình ảnh hoặc đoạn văn bản trên trang chiếu.", ans: "D" },
-            { text: "b) Khi trình chiếu, Nam nháy chuột vào đối tượng chứa liên kết thì video sẽ được mở ra.", ans: "D" },
-            { text: "c) Nam chỉ có thể liên kết đến các trang web, không thể liên kết đến các tệp tin trên máy tính.", ans: "S" },
-            { text: "d) Nếu Nam sao chép tệp trình chiếu sang máy khác nhưng không sao chép tệp video đi cùng, liên kết có thể bị lỗi.", ans: "D" }
+        { title: "Xét các nhận định về bài học \"Biểu diễn dữ liệu\".", items: [
+            { text: "a) Scratch có ba kiểu dữ liệu được nêu trong bài: số, xâu kí tự và lôgic.", ans: "D" },
+            { text: "b) Biến là giá trị không đổi trong quá trình thực hiện chương trình.", ans: "S" },
+            { text: "c) Hằng là giá trị không đổi trong quá trình thực hiện chương trình.", ans: "D" },
+            { text: "d) Biểu thức là sự kết hợp của biến, hằng, dấu ngoặc, phép toán và các hàm để trả lại giá trị thuộc một kiểu dữ liệu nhất định.", ans: "D" }
         ]}
     ];
 
     // --- NGÂN HÀNG TỰ LUẬN (3 CÂU) ---
     const allEssayBank = [
-        { text: "Em hãy giải thích vì sao khi thiết kế bài trình chiếu, ta cần chọn màu văn bản có độ tương phản cao với màu nền? Cho một ví dụ về sự kết hợp màu hợp lý. (1.0 điểm)" },
-        { text: "Giả sử em đang làm một bài trình chiếu báo cáo. Em hãy nêu các bước để thêm nội dung \"Báo cáo Tổng kết\" vào chân trang (Footer) của tất cả các trang chiếu (trừ trang tiêu đề) và đánh số trang cho bài trình chiếu đó. (1.0 điểm)" },
-        { text: "Bạn An đã tạo một bản mẫu (Template) riêng cho CLB Tin học với logo và màu sắc đặc trưng. Bạn An muốn chia sẻ bản mẫu này cho các thành viên khác để sử dụng. Bạn An cần lưu tệp với phần mở rộng là gì? Khi các thành viên khác mở tệp này để sử dụng, họ có thể chỉnh sửa nội dung cho phù hợp với bài báo cáo cá nhân của họ không? (1.0 điểm)" }
+        { text: "Trình bày đặc điểm của văn bản trên trang chiếu theo Bài 10a. Khi lựa chọn màu sắc và cỡ chữ cho trang chiếu, em cần chú ý những điểm gì? (1.0 điểm)" },
+        { text: "Theo Bài 12, em hãy mô tả bằng ngôn ngữ tự nhiên thuật toán điều khiển nhân vật đi theo đường đi là tam giác đều. Nêu thêm ba thành phần của một vòng lặp được trình bày trong tài liệu. (1.0 điểm)" },
+        { text: "Theo Bài 13, em hãy nêu khái niệm biến, hằng và biểu thức. Dựa vào ví dụ trong tài liệu, hãy chỉ ra một biến và hai biểu thức số được sử dụng để khái quát đường đi của hình có n cạnh đều. (1.0 điểm)" }
     ];
 
     // ==========================================
