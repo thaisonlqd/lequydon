@@ -191,149 +191,74 @@
     
     // --- NGÂN HÀNG TRẮC NGHIỆM MCQ (36 CÂU) ---
     const allMcqBank = [
-        // BÀI 10: SƠ ĐỒ TƯ DUY (9 Biết, 3 Hiểu)
-        { lesson: 10, lvl: "NB", q: "Sơ đồ tư duy là gì?", options: ["Một công cụ ghi chép và hệ thống thông tin trực quan", "Một phần mềm gõ văn bản", "Một thiết bị máy tính", "Một chương trình diệt virus"], correct: 0, cols: 1 },
+        // BÀI 10: SƠ ĐỒ TƯ DUY
+        { lesson: 10, lvl: "NB", q: "Theo em, khái niệm sơ đồ tư duy là gì?", options: ["Là công cụ thay thế thế hoàn toàn cho máy tính.", "Là văn bản chứa các số liệu phức tạp được sắp xếp liên tiếp.", "Là phương pháp trình bày thông tin một cách trực quan, bằng cách sử dụng văn bản, hình ảnh và các đường nối.", "Là một loại trò chơi gấp giấy trên máy tính."], correct: 2, cols: 2 },
+        { lesson: 10, lvl: "NB", q: "Thành phần nào dưới đây không phải là ý chi tiết của chủ đề 'Thành phần' trong một sơ đồ tư duy?", options: ["Từ khoá.", "Văn bản.", "Hình ảnh.", "Đường nối."], correct: 1, cols: 2 },
         { lesson: 10, lvl: "NB", q: "Thành phần nào luôn được đặt ở vị trí trung tâm của sơ đồ tư duy?", options: ["Từ khóa", "Hình ảnh minh họa", "Chủ đề chính", "Các nhánh phụ"], correct: 2, cols: 2 },
         { lesson: 10, lvl: "NB", q: "Trong sơ đồ tư duy, các đường nối (nhánh) có tác dụng gì?", options: ["Trang trí cho đẹp", "Thể hiện mối quan hệ giữa các ý", "Chia màn hình thành các phần", "Đánh số thứ tự"], correct: 1, cols: 1 },
-        { lesson: 10, lvl: "NB", q: "Từ khóa trong sơ đồ tư duy nên có đặc điểm gì?", options: ["Càng dài càng tốt", "Ngắn gọn, mang ý nghĩa chính", "Phải viết bằng tiếng Anh", "Phải là số"], correct: 1, cols: 1 },
-        { lesson: 10, lvl: "NB", q: "Lợi ích của sơ đồ tư duy là gì?", options: ["Giúp nhìn thấy bức tranh tổng thể và ghi nhớ tốt hơn", "Tính toán số liệu phức tạp", "Chỉnh sửa video", "Bảo mật thông tin"], correct: 0, cols: 1 },
-        { lesson: 10, lvl: "NB", q: "Sơ đồ tư duy KHÔNG bao gồm thành phần nào sau đây?", options: ["Chủ đề chính", "Từ khóa", "Công thức toán học tự động", "Nhánh và đường nối"], correct: 2, cols: 1 },
-        { lesson: 10, lvl: "NB", q: "Phần mềm nào sau đây dùng để tạo sơ đồ tư duy?", options: ["MindMaple Lite", "MS Excel", "MS Paint", "Zalo"], correct: 0, cols: 2 },
-        { lesson: 10, lvl: "NB", q: "Chủ đề phụ trong sơ đồ tư duy được phát triển từ đâu?", options: ["Từ hình ảnh", "Từ chủ đề chính", "Từ màu nền", "Từ viền trang"], correct: 1, cols: 2 },
-        { lesson: 10, lvl: "NB", q: "Để Sơ đồ tư duy trực quan hơn, người ta thường sử dụng thêm yếu tố nào?", options: ["Mật khẩu", "Văn bản siêu dài", "Màu sắc và hình ảnh", "Bảng biểu phức tạp"], correct: 2, cols: 1 },
-        { lesson: 10, lvl: "TH", q: "Tại sao nói sơ đồ tư duy giúp quá trình ghi nhớ trở nên dễ dàng hơn?", options: ["Vì nó ép buộc học sinh phải chép tay nhiều lần", "Vì nó sử dụng từ khóa kết hợp hình ảnh, màu sắc để kích thích não bộ", "Vì nó là một tệp lưu trong USB", "Vì nội dung của nó luôn ít hơn 10 chữ"], correct: 1, cols: 1 },
-        { lesson: 10, lvl: "TH", q: "Ưu điểm của việc vẽ sơ đồ tư duy bằng phần mềm so với vẽ tay là gì?", options: ["Dễ dàng chỉnh sửa, thêm bớt nhánh mà không làm bẩn hình", "Chỉ dùng được 1 màu duy nhất", "Không thể chèn hình ảnh", "Bắt buộc phải có mạng Internet mới xem được"], correct: 0, cols: 1 },
-        { lesson: 10, lvl: "TH", q: "Khi chuyển một đoạn văn bản tóm tắt sang sơ đồ tư duy, bước đầu tiên em cần làm là gì?", options: ["Chọn màu mực", "Xác định Chủ đề chính", "Đếm số dòng của văn bản", "Lưu tệp"], correct: 1, cols: 2 },
+        { lesson: 10, lvl: "TH", q: "Lợi ích nổi bật của sơ đồ tư duy là gì?", options: ["Giúp nhìn thấy nội dung khái quát, dễ hiểu, dễ nhớ và tiết kiệm thời gian hơn văn bản thông thường", "Chỉ dùng để trang trí bài trình chiếu", "Thay thế hoàn toàn cho văn bản dài", "Chỉ dùng được khi có Internet"], correct: 0, cols: 1 },
+        { lesson: 10, lvl: "TH", q: "Để tạo các ý nhỏ phát triển từ chủ đề chính trong phần mềm MindMaple Lite, em thường dùng lệnh nào?", options: ["Save", "Subtopic", "Print", "Open"], correct: 1, cols: 2 },
 
-        // BÀI 11: ĐỊNH DẠNG VĂN BẢN (12 Biết)
-        { lesson: 11, lvl: "NB", q: "Chức năng cơ bản của phần mềm soạn thảo văn bản là gì?", options: ["Tạo, định dạng và lưu trữ văn bản", "Lập bảng điểm", "Chỉnh sửa video", "Vẽ sơ đồ tư duy"], correct: 0, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Để căn giữa cho một đoạn văn bản, em dùng nút lệnh nào?", options: ["Align Left", "Center", "Align Right", "Justify"], correct: 1, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Thao tác nào dùng để thay đổi kiểu chữ thành in đậm?", options: ["Nhấn nút Italic (I)", "Nhấn nút Underline (U)", "Nhấn nút Bold (B)", "Nhấn nút Font Color"], correct: 2, cols: 1 },
+        // BÀI 11: SOẠN THẢO VĂN BẢN
+        { lesson: 11, lvl: "NB", q: "Đâu là các chức năng đặc trưng cơ bản của phần mềm soạn thảo văn bản?", options: ["Tính toán dữ liệu tự động, chỉnh sửa video và tạo chữ nghệ thuật.", "Thiết kế sơ đồ tư duy và vẽ biểu đồ hình tròn trực quan.", "Bắt lỗi thuật toán, tìm kiếm thiết bị trên mạng máy tính.", "Tạo và định dạng văn bản, biên tập, chỉnh sửa nội dung, lưu trữ và in văn bản."], correct: 3, cols: 2 },
+        { lesson: 11, lvl: "NB", q: "Trong phần mềm soạn thảo văn bản, để chọn hướng trang đứng (khi trình bày Đơn xin nghỉ học), em sử dụng lệnh nào trong nhóm Page Setup?", options: ["Margins.", "Portrait.", "Landscape.", "Size."], correct: 1, cols: 2 },
+        { lesson: 11, lvl: "NB", q: "Ý nghĩa cốt lõi của việc thực hiện thao tác định dạng văn bản là gì?", options: ["Giúp thay đổi nội dung của văn bản trở nên phong phú hơn.", "Giúp chuyển đổi văn bản sang dạng bảng số liệu.", "Thay đổi hình thức của văn bản để trình bày đẹp, dễ đọc, dễ nhớ.", "Giúp phần mềm kiểm tra và sửa lỗi chính tả một cách tự động."], correct: 2, cols: 2 },
         { lesson: 11, lvl: "NB", q: "Phím tắt dùng để lưu tệp văn bản là gì?", options: ["Ctrl + C", "Ctrl + P", "Ctrl + S", "Ctrl + X"], correct: 2, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Khổ giấy phổ biến nhất dùng trong in ấn hành chính ở Việt Nam là?", options: ["A3", "A5", "Letter", "A4"], correct: 3, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Lề trang văn bản (Margins) bao gồm những lề nào?", options: ["Lề trái, lề phải", "Lề trên, lề dưới", "Lề trên, dưới, trái, phải", "Lề giữa"], correct: 2, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Hướng trang văn bản đứng trong tiếng Anh gọi là gì?", options: ["Landscape", "Portrait", "Margins", "Size"], correct: 1, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Nút lệnh Justify có chức năng gì?", options: ["Căn lề trái", "Căn lề phải", "Căn đều hai bên", "Căn giữa"], correct: 2, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Để thay đổi khoảng cách giữa các dòng trong đoạn văn, ta dùng lệnh nào?", options: ["Font Size", "Line Spacing", "Text Color", "Bold"], correct: 1, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Lệnh thụt lề dòng đầu tiên của đoạn văn nằm ở đâu?", options: ["Mục Font", "Hộp thoại Paragraph > Special > First line", "Mục Layout", "Mục Insert"], correct: 1, cols: 1 },
-        { lesson: 11, lvl: "NB", q: "Phím tắt để in nghiêng văn bản là gì?", options: ["Ctrl + I", "Ctrl + B", "Ctrl + U", "Ctrl + E"], correct: 0, cols: 2 },
-        { lesson: 11, lvl: "NB", q: "Phần mềm MS Word thuộc loại phần mềm nào?", options: ["Phần mềm bảng tính", "Phần mềm trình chiếu", "Phần mềm soạn thảo văn bản", "Hệ điều hành"], correct: 2, cols: 1 },
+        { lesson: 11, lvl: "TH", q: "Khi một bức ảnh phong cảnh quá rộng, giải pháp tối ưu để hiển thị rõ hơn trên giấy A4 là gì?", options: ["Giảm cỡ chữ toàn bộ văn bản", "Đổi hướng trang sang Landscape", "Tăng lề trái thật lớn", "Xóa ảnh khỏi tài liệu"], correct: 1, cols: 2 },
+        { lesson: 11, lvl: "TH", q: "Công cụ Find and Replace có tác dụng chính là gì?", options: ["Tìm kiếm và thay thế tự động từ hoặc cụm từ trong văn bản", "Chèn bảng vào văn bản", "Tạo sơ đồ tư duy", "Đổi màu nền trang giấy"], correct: 0, cols: 1 },
 
-        // BÀI 12: TRÌNH BÀY THÔNG TIN Ở DẠNG BẢNG (9 Biết, 3 Hiểu)
+        // BÀI 12: BẢNG TRONG VĂN BẢN
+        { lesson: 12, lvl: "NB", q: "Trong soạn thảo văn bản, thông tin thường được trình bày ở dạng bảng khi nào?", options: ["Khi cần ghi lại dữ liệu của công việc thống kê, điều tra, khảo sát.", "Khi muốn trình bày một đoạn thơ lục bát.", "Khi muốn viết một bức thư cảm nhận gửi cho bạn bè.", "Khi cần tìm kiếm và thay thế lỗi chính tả."], correct: 0, cols: 2 },
+        { lesson: 12, lvl: "NB", q: "So với việc sử dụng danh sách liệt kê, ưu điểm nổi bật của việc trình bày thông tin ở dạng bảng là gì?", options: ["Chứa đựng được nhiều thông tin văn bản dài hơn.", "Trình bày thông tin cô đọng, dễ dàng tìm kiếm, so sánh và tổng hợp.", "Dễ dàng chuyển đổi thông tin thành sơ đồ tư duy trên giấy.", "Tự động chỉnh sửa lỗi căn lề và lỗi cú pháp."], correct: 1, cols: 2 },
         { lesson: 12, lvl: "NB", q: "Bảng (Table) được cấu tạo từ các thành phần cơ bản nào?", options: ["Hàng, cột và ô", "Văn bản và hình ảnh", "Đường thẳng và đường chéo", "Kí tự và con số"], correct: 0, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Sự giao nhau giữa một hàng và một cột trong bảng được gọi là gì?", options: ["Bảng", "Ô (Cell)", "Tiêu đề", "Đường viền"], correct: 1, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Để chèn bảng vào văn bản trong MS Word, em chọn thẻ lệnh nào?", options: ["Home", "Design", "Insert", "Layout"], correct: 2, cols: 2 },
         { lesson: 12, lvl: "NB", q: "Nút lệnh Merge Cells có chức năng gì?", options: ["Xóa ô", "Tách một ô thành nhiều ô", "Thêm cột", "Gộp nhiều ô thành một ô"], correct: 3, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Để thêm một hàng mới vào ngay bên dưới hàng đang chọn, em dùng lệnh gì?", options: ["Insert Above", "Insert Below", "Insert Left", "Delete Rows"], correct: 1, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Để xóa một cột trong bảng, em bôi đen cột đó và chọn lệnh nào?", options: ["Delete Rows", "Delete Cells", "Delete Columns", "Delete Table"], correct: 2, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Nút lệnh Split Cells dùng để làm gì?", options: ["Gộp nhiều ô", "Tách một ô thành nhiều ô nhỏ", "Tô màu ô", "Kẻ viền cho ô"], correct: 1, cols: 2 },
-        { lesson: 12, lvl: "NB", q: "Cột (Column) trong bảng chạy theo hướng nào?", options: ["Hướng ngang", "Hướng dọc (từ trên xuống)", "Hướng chéo", "Hướng vòng tròn"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "NB", q: "Để thay đổi độ rộng của một cột, ta đưa con trỏ chuột vào đâu?", options: ["Giữa ô", "Đường viền ngăn cách giữa các cột", "Góc bảng", "Bên ngoài bảng"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "TH", q: "Ưu điểm lớn nhất của việc trình bày thông tin dưới dạng bảng là gì?", options: ["Làm cho văn bản dài ra", "Thông tin được trình bày cô đọng, có cấu trúc, dễ tìm kiếm và so sánh", "Chữ sẽ tự động đổi màu", "Máy tính lưu tệp nhanh hơn"], correct: 1, cols: 1 },
-        { lesson: 12, lvl: "TH", q: "Khi nào em NÊN sử dụng bảng để trình bày thông tin?", options: ["Khi viết một bài thơ", "Khi viết đơn xin phép nghỉ học", "Khi lập thời khóa biểu hoặc danh sách lớp", "Khi tả cảnh sân trường"], correct: 2, cols: 1 },
-        { lesson: 12, lvl: "TH", q: "Nếu muốn tạo một tiêu đề chung bao trùm lên 3 cột chứa thông tin chi tiết, em phải làm gì?", options: ["Xóa 2 cột đi", "Bôi đen 3 ô ở hàng đầu tiên và chọn Merge Cells", "Tạo 3 bảng khác nhau", "Dùng lệnh Split Cells"], correct: 1, cols: 1 }
+        { lesson: 12, lvl: "TH", q: "Nếu muốn tạo một tiêu đề chung bao trùm lên 3 cột chứa thông tin chi tiết, em phải làm gì?", options: ["Xóa 2 cột đi", "Bôi đen 3 ô ở hàng đầu tiên và chọn Merge Cells", "Tạo 3 bảng khác nhau", "Dùng lệnh Split Cells"], correct: 1, cols: 1 },
+        { lesson: 12, lvl: "TH", q: "Để chèn nội dung từ hai tệp văn bản có sẵn vào một tệp mới, em có thể dùng lệnh nào trong thẻ Insert?", options: ["Text from file / Insert text from file", "Orientation", "Margins", "Symbol"], correct: 0, cols: 1 },
+
+        // BÀI 13: THUẬT TOÁN
+        { lesson: 13, lvl: "NB", q: "Diễn tả khái niệm thuật toán, phát biểu nào sau đây là đúng nhất?", options: ["Là phần mềm trên máy tính dùng để tính toán điểm số.", "Là sự kết hợp giữa ngôn ngữ tự nhiên và hình ảnh minh họa.", "Là một dãy các bước thực hiện không cần theo trình tự.", "Là các bước thực hiện tuần tự để giải quyết công việc hay một bài toán."], correct: 3, cols: 2 },
+        { lesson: 13, lvl: "NB", q: "Khi thực hiện thuật toán gấp hình trò chơi Đông – Tây – Nam – Bắc, 'Đầu vào' của thuật toán được xác định là gì?", options: ["Tờ giấy hình chữ nhật.", "Tờ giấy hình vuông.", "Hình gấp trò chơi hoàn chỉnh.", "Cái kéo và bút màu."], correct: 1, cols: 2 },
+        { lesson: 13, lvl: "NB", q: "Có mấy cách phổ biến để mô tả thuật toán?", options: ["1 cách.", "2 cách.", "3 cách.", "4 cách."], correct: 1, cols: 2 },
+        { lesson: 13, lvl: "NB", q: "Theo quy ước sử dụng sơ đồ khối để mô tả thuật toán, hình thoi được dùng để thể hiện ý nghĩa gì?", options: ["Bắt đầu hoặc kết thúc.", "Đầu vào hoặc Đầu ra.", "Bước kiểm tra điều kiện.", "Bước xử lí."], correct: 2, cols: 2 },
+        { lesson: 13, lvl: "TH", q: "Nhược điểm của việc mô tả thuật toán bằng ngôn ngữ tự nhiên (liệt kê) so với sử dụng sơ đồ khối là gì?", options: ["Trình bày rất trực quan, nhìn thấy rõ các bước và cách thực hiện.", "Phụ thuộc khả năng diễn đạt của từng người, dễ bị dài dòng và không mạch lạc.", "Không chỉ ra được đầu vào và đầu ra của bài toán.", "Không thể áp dụng để giải các bài toán thực tế."], correct: 1, cols: 2 },
+        { lesson: 13, lvl: "TH", q: "Trong thuật toán tính tổng hai số a và b, đầu vào là gì?", options: ["Giá trị tổng", "Hai giá trị a và b", "Bảng kết quả", "Máy tính"], correct: 1, cols: 2 }
     ];
 
-    // --- NGÂN HÀNG ĐÚNG/SAI (12 Câu lớn) ---
+    // --- NGÂN HÀNG ĐÚNG/SAI (4 CÂU lớn bám đề mẫu) ---
     const allTfBank = [
-        // BÀI 10 (3 Câu)
-        { lesson: 10, title: "Kiến thức chung về Sơ đồ tư duy:", items: [
-            { text: "a) Chủ đề chính của sơ đồ tư duy luôn nằm ở vị trí trung tâm.", ans: "D" },
-            { text: "b) Các nhánh phụ dùng để nối từ khóa với hình ảnh không liên quan.", ans: "S" },
-            { text: "c) Sơ đồ tư duy giúp ta nhìn thấy bức tranh tổng thể của một vấn đề.", ans: "D" },
-            { text: "d) Sơ đồ tư duy bắt buộc chỉ được vẽ bằng 2 màu mực.", ans: "S" }
+        { lesson: 10, title: "Lớp trưởng đề xuất tổng kết các hoạt động lớp 6A trong năm học bằng phần mềm MindMaple Lite để tạo một sơ đồ tư duy thay thế cho một bài phát biểu dài dòng. Hãy xác định tính Đúng/Sai của các phát biểu sau về việc tạo sơ đồ tư duy:", items: [
+            { text: "a) Sơ đồ tư duy được tạo ra sẽ bao gồm các thành phần chính là chủ đề chính, các nhánh, từ khóa và hình ảnh.", ans: "D" },
+            { text: "b) 'SỔ LƯU NIỆM LỚP 6A' được coi là một từ khóa và nên được điền vào phần chủ đề nhánh (Subtopic).", ans: "S" },
+            { text: "c) Lợi ích của việc thiết kế bằng sơ đồ tư duy sẽ giúp người xem dễ hiểu, dễ nhớ và tổng hợp vấn đề một cách khái quát, tiết kiệm thời gian hơn văn bản thông thường.", ans: "D" },
+            { text: "d) Để tạo được các hoạt động thể thao, văn nghệ từ 'SỔ LƯU NIỆM LỚP 6A', bạn lớp trưởng chọn thẻ Insert, sau đó nháy chuột chọn lệnh 'Subtopic' để tạo các nhánh mới.", ans: "D" }
         ]},
-        { lesson: 10, title: "Thành phần của Sơ đồ tư duy:", items: [
-            { text: "a) Từ khóa trong sơ đồ tư duy phải là những đoạn văn dài.", ans: "S" },
-            { text: "b) Hình ảnh minh họa giúp sơ đồ tư duy sinh động và dễ nhớ hơn.", ans: "D" },
-            { text: "c) Đường nối (nhánh) thể hiện mối liên hệ giữa các ý.", ans: "D" },
-            { text: "d) Không thể thêm nhánh mới sau khi đã vẽ xong sơ đồ tư duy.", ans: "S" }
+        { lesson: 11, title: "Bạn Lan đang biên tập một tài liệu chứa hình ảnh phong cảnh bề ngang rất rộng (Panorama) để gộp vào cuốn sổ lưu niệm của lớp. Lan nhận thấy nếu in ở giấy khổ A4 đứng, ảnh sẽ bị thu nhỏ lại rất khó nhìn.", items: [
+            { text: "a) Lệnh căn lề đoạn văn bản chứa bức ảnh này được tìm thấy trong dải lệnh Page Layout của phần mềm.", ans: "S" },
+            { text: "b) Nếu Lan thực hiện thao tác thay đổi hướng trang (Orientation), điều này sẽ làm thay đổi nội dung (chi tiết có trong ảnh) của tài liệu sổ lưu niệm.", ans: "S" },
+            { text: "c) Để khắc phục hiện tượng trên, Lan chỉ cần nháy chuột vào nút mũi tên bên dưới lệnh Margins và thiết lập lại lề trái, lề phải (Left, Right) của trang văn bản là đủ.", ans: "S" },
+            { text: "d) Giải pháp tối ưu nhất cho trang tài liệu này là Lan nháy chuột chọn nút mũi tên bên dưới lệnh Orientation, sau đó chọn Landscape để xoay trang theo hướng nằm ngang.", ans: "D" }
         ]},
-        { lesson: 10, title: "Tạo sơ đồ tư duy bằng phần mềm:", items: [
-            { text: "a) MindMaple Lite là một trong những phần mềm dùng để tạo sơ đồ tư duy.", ans: "D" },
-            { text: "b) Khi dùng phần mềm, ta không thể di chuyển vị trí của các nhánh.", ans: "S" },
-            { text: "c) Vẽ sơ đồ tư duy trên máy tính giúp việc chỉnh sửa, chia sẻ trở nên dễ dàng.", ans: "D" },
-            { text: "d) Phần mềm vẽ sơ đồ tư duy tự động tính toán được điểm trung bình của học sinh.", ans: "S" }
+        { lesson: 13, title: "Bạn An đang tìm hiểu về khái niệm 'Thuật toán' và phân tích quy trình hướng dẫn gấp hình trò chơi 'Đông - Tây - Nam - Bắc'.", items: [
+            { text: "a) Dãy 6 bước thực hiện gấp giấy theo hướng dẫn được gọi là một thuật toán.", ans: "D" },
+            { text: "b) 'Đầu ra' của quy trình thực hiện thuật toán này là nguyên liệu tờ giấy hình vuông ban đầu.", ans: "S" },
+            { text: "c) Nếu An sử dụng sơ đồ khối để mô tả lại các bước gấp giấy, bước Bắt đầu hoặc Kết thúc sẽ được quy ước bằng hình thoi.", ans: "S" },
+            { text: "d) Khi vẽ sơ đồ khối, An phải vẽ đường có mũi tên nối giữa các hình để chỉ rõ hướng thực hiện từ bước này sang bước khác.", ans: "D" }
         ]},
-
-        // BÀI 11 (3 Câu)
-        { lesson: 11, title: "Định dạng đoạn văn bản:", items: [
-            { text: "a) Khi soạn thảo, MS Word luôn tự động căn lề phải cho mọi đoạn văn.", ans: "S" },
-            { text: "b) Lệnh Justify dùng để căn đều cả hai bên lề trái và phải.", ans: "D" },
-            { text: "c) Ta có thể thay đổi khoảng cách giữa các dòng trong một đoạn văn (Line spacing).", ans: "D" },
-            { text: "d) Chức năng thụt lề dòng đầu (First line) chỉ áp dụng được cho tiêu đề.", ans: "S" }
-        ]},
-        { lesson: 11, title: "Thiết lập trang văn bản:", items: [
-            { text: "a) Lề trang (Margins) là khoảng trắng từ mép giấy đến phần nội dung văn bản.", ans: "D" },
-            { text: "b) Hướng trang Landscape là hướng trang dọc.", ans: "S" },
-            { text: "c) Khổ giấy A4 có kích thước lớn hơn khổ giấy A3.", ans: "S" },
-            { text: "d) Việc thiết lập lề và khổ giấy ảnh hưởng trực tiếp đến kết quả khi in ra giấy.", ans: "D" }
-        ]},
-        { lesson: 11, title: "Tác dụng của việc định dạng văn bản:", items: [
-            { text: "a) Định dạng văn bản giúp tài liệu đẹp mắt và dễ đọc hơn.", ans: "D" },
-            { text: "b) Các loại đơn từ, báo cáo có thể sử dụng bất kỳ kiểu căn lề nào tùy thích.", ans: "S" },
-            { text: "c) In đậm hoặc in nghiêng giúp nhấn mạnh những nội dung quan trọng.", ans: "D" },
-            { text: "d) Định dạng văn bản có thể làm cho máy tính chạy nhanh hơn.", ans: "S" }
-        ]},
-
-        // BÀI 12 (6 Câu)
-        { lesson: 12, title: "Cấu trúc của Bảng:", items: [
-            { text: "a) Một bảng có thể có nhiều hàng nhưng chỉ được phép có 1 cột.", ans: "S" },
-            { text: "b) Ô là phần giao nhau giữa một hàng và một cột.", ans: "D" },
-            { text: "c) Bảng giúp thông tin được tổ chức rõ ràng, có trật tự.", ans: "D" },
-            { text: "d) Khi đã tạo bảng, không thể thay đổi số lượng cột và hàng nữa.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Thao tác chèn và xóa hàng/cột:", items: [
-            { text: "a) Lệnh Insert Left dùng để chèn thêm một cột vào bên trái cột đang chọn.", ans: "D" },
-            { text: "b) Khi xóa một hàng, toàn bộ dữ liệu trong hàng đó sẽ bị mất.", ans: "D" },
-            { text: "c) Lệnh Delete Columns dùng để xóa toàn bộ bảng.", ans: "S" },
-            { text: "d) Không thể chèn thêm hàng vào giữa hai hàng đã có sẵn nội dung.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Gộp và tách ô trong Bảng:", items: [
-            { text: "a) Lệnh Merge Cells dùng để gộp nhiều ô liền kề thành một ô lớn.", ans: "D" },
-            { text: "b) Ta có thể dùng lệnh Split Cells để tách 1 ô thành 2 hàng, 2 cột.", ans: "D" },
-            { text: "c) Gộp ô thường được sử dụng để tạo tiêu đề chung cho nhiều cột.", ans: "D" },
-            { text: "d) Lệnh Merge Cells có thể gộp các ô nằm cách xa nhau.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Thay đổi kích thước của Bảng:", items: [
-            { text: "a) Có thể điều chỉnh độ rộng của một cột mà không ảnh hưởng đến cột khác.", ans: "D" },
-            { text: "b) Độ cao của hàng sẽ tự động nới rộng ra nếu nội dung chữ quá nhiều.", ans: "D" },
-            { text: "c) Bắt buộc tất cả các cột trong bảng phải có độ rộng bằng nhau.", ans: "S" },
-            { text: "d) Không thể điều chỉnh kích thước tổng thể của toàn bộ bảng.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Ưu điểm và ứng dụng của Bảng:", items: [
-            { text: "a) Danh sách học sinh của lớp nên được trình bày dưới dạng bảng.", ans: "D" },
-            { text: "b) Trình bày dạng bảng giúp người xem dễ dàng so sánh các số liệu.", ans: "D" },
-            { text: "c) Văn bản truyện cổ tích nên trình bày dưới dạng bảng để dễ đọc hơn.", ans: "S" },
-            { text: "d) Thông tin trong bảng rất khó để tìm kiếm so với văn bản dạng đoạn.", ans: "S" }
-        ]},
-        { lesson: 12, title: "Các lệnh chỉnh sửa Bảng nâng cao:", items: [
-            { text: "a) Thẻ Layout của Table Tools chứa các lệnh chèn, xóa hàng cột.", ans: "D" },
-            { text: "b) Có thể căn giữa nội dung chữ vào chính giữa ô (cả chiều ngang và dọc).", ans: "D" },
-            { text: "c) Không thể thay đổi màu viền của bảng.", ans: "S" },
-            { text: "d) Thẻ Design của Table Tools dùng để tô màu nền cho các ô trong bảng.", ans: "D" }
+        { lesson: 13, title: "Cho thuật toán tính tổng của hai số a và b được mô tả bằng cách liệt kê dưới đây: Bước 1: Nhập giá trị a, giá trị b. Bước 2: Tính tổng a + b. Bước 3: Thông báo giá trị của Tổng. Dựa trên kiến thức về thuật toán, hãy phân tích đoạn mô tả trên:", items: [
+            { text: "a) Trong cách trình bày theo dạng liệt kê, chúng ta có thể tùy ý thay đổi thứ tự giữa Bước 2 và Bước 3 mà vẫn ra được kết quả đúng như mong muốn.", ans: "S" },
+            { text: "b) Phương pháp mô tả các bước bằng văn bản mà bạn đang theo dõi ở trên được gọi là mô tả bằng ngôn ngữ tự nhiên.", ans: "D" },
+            { text: "c) Đối chiếu thuật toán này sang một bài toán thực tế: Đầu vào (Input) của bài toán tính trung bình cộng hai số chính là hai giá trị a và b.", ans: "D" },
+            { text: "d) Nếu bài toán trên được chuyển thành sơ đồ khối, nội dung ở 'Bước 2' (Tính toán) sẽ được đặt bên trong khối hình Oval (ô-van).", ans: "S" }
         ]}
     ];
 
-    // --- NGÂN HÀNG TỰ LUẬN (9 Câu lớn) ---
+    // --- NGÂN HÀNG TỰ LUẬN (3 CÂU bám đề mẫu) ---
     const allEssayBank = [
-        // BÀI 10
-        { lesson: 10, text: "Sơ đồ tư duy là gì? Hãy nêu các thành phần cơ bản cấu tạo nên một sơ đồ tư duy và vẽ phác thảo cấu trúc của một sơ đồ tư duy có chủ đề chính là 'Gia đình em' với 3 nhánh phụ? (1.0 điểm)" },
-        { lesson: 10, text: "Em hãy nêu sự khác biệt và ưu điểm của việc sử dụng phần mềm để vẽ sơ đồ tư duy so với việc vẽ sơ đồ tư duy bằng tay trên giấy? (1.0 điểm)" },
-        { lesson: 10, text: "Cho đoạn văn bản sau: 'Máy tính để bàn thường có 4 bộ phận chính là thân máy, màn hình, bàn phím và chuột'. Em hãy thiết kế cấu trúc sơ đồ tư duy để tóm tắt câu văn trên (chỉ rõ đâu là chủ đề chính, đâu là các nhánh phụ)? (1.0 điểm)" },
-        
-        // BÀI 11
-        { lesson: 11, text: "Khi soạn thảo một lá đơn xin phép nghỉ học trên phần mềm MS Word, em sẽ sử dụng các lệnh căn lề (trái, phải, giữa) như thế nào cho các phần: Quốc hiệu (Cộng hòa xã hội...), Tên đơn (ĐƠN XIN PHÉP), và Nội dung trình bày? (1.0 điểm)" },
-        { lesson: 11, text: "Em hãy trình bày các bước thiết lập trang văn bản trước khi in theo chuẩn sau: Khổ giấy A4, Hướng trang đứng (Portrait), Lề trái 3cm, các lề còn lại 2cm? (1.0 điểm)" },
-        { lesson: 11, text: "Thao tác định dạng đoạn văn bản mang lại những lợi ích gì? Nêu các bước để thiết lập thụt lề dòng đầu tiên (First line indent) cho một đoạn văn bản? (1.0 điểm)" },
-
-        // BÀI 12
-        { lesson: 12, text: "Hãy nêu ít nhất 2 ưu điểm của việc trình bày thông tin dưới dạng bảng so với trình bày bằng văn bản thông thường? Cho 2 ví dụ thực tế về thông tin cần dùng bảng. (1.0 điểm)" },
-        { lesson: 12, text: "Em hãy trình bày các thao tác để tạo một bảng gồm 5 cột và 4 hàng trong phần mềm MS Word. Sau đó, làm thế nào để gộp toàn bộ 5 ô ở hàng đầu tiên thành một ô duy nhất để ghi tiêu đề? (1.0 điểm)" },
-        { lesson: 12, text: "Trong quá trình tạo bảng danh sách lớp, em vô tình bỏ sót cột 'Ngày sinh'. Hãy nêu các bước để chèn thêm một cột 'Ngày sinh' vào bên phải cột 'Họ và tên' đã có sẵn trong bảng? (1.0 điểm)" }
+        { lesson: 11, text: "Bạn Lan thực hành gõ lại bài thơ 'Đi cấy', nhưng do vội nên bạn đã gõ sai từ 'Trông' thành từ 'Trong' ở rất nhiều chỗ (Ví dụ: 'Trong trời, trong đất, trong mây...'). Em hãy giải thích tác dụng của công cụ Tìm kiếm và thay thế (Find and Replace) trong trường hợp của bạn Lan. Trình bày tóm tắt các bước thực hiện để giúp Lan thay thế từ viết sai chính tả một cách tự động. (1.0 điểm)" },
+        { lesson: 12, text: "Nhóm của em được phân công thiết kế cuốn 'Sổ lưu niệm' cho lớp trên phần mềm soạn thảo văn bản. Để hoàn thiện sản phẩm cuối cùng, nhóm đã tạo trước hai tệp độc lập là CamNghiVeBan.docx và DanhSachLop.docx. Dựa vào kiến thức 'Thực hành tổng hợp', em hãy trình bày các thao tác tổng hợp để chèn nội dung trực tiếp từ hai tệp văn bản có sẵn trên vào một tệp mới tên là Soluuniem.docx (Sử dụng lệnh trong thẻ Insert). (1.0 điểm)" },
+        { lesson: 13, text: "Cho tình huống thực tế: Để xếp loại cuối kì, giáo viên cần tính điểm trung bình môn của một học sinh, biết rằng môn này gồm 2 điểm thành phần là điểm đánh giá thường xuyên (a) có hệ số 1, và điểm đánh giá cuối kỳ (b) có hệ số 2. Em hãy xác định Đầu vào, Đầu ra và xây dựng thuật toán giải quyết bài toán trên (bằng phương pháp liệt kê các bước). (1.0 điểm)" }
     ];
-
-    // ==========================================
+// ==========================================
     // 2. THUẬT TOÁN XÁO TRỘN & BỐC ĐỀ CHUẨN MA TRẬN
     // ==========================================
     function shuffleArray(array) {
@@ -349,41 +274,29 @@
     let selectedMcq = [], selectedTf = [], selectedEssay = [];
 
     function generateRandomExam() {
-        // 1. RÚT TRẮC NGHIỆM (MCQ) - 12 CÂU (B10: 4, B11: 4, B12: 4)
-        let mcq10_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 10 && q.lvl === "NB")).slice(0, 3);
-        let mcq10_TH = shuffleArray(allMcqBank.filter(q => q.lesson === 10 && q.lvl === "TH")).slice(0, 1);
-        
-        let mcq11_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 11 && q.lvl === "NB")).slice(0, 4);
-        
-        let mcq12_NB = shuffleArray(allMcqBank.filter(q => q.lesson === 12 && q.lvl === "NB")).slice(0, 3);
-        let mcq12_TH = shuffleArray(allMcqBank.filter(q => q.lesson === 12 && q.lvl === "TH")).slice(0, 1);
-        
-        selectedMcq = shuffleArray([...mcq10_NB, ...mcq10_TH, ...mcq11_NB, ...mcq12_NB, ...mcq12_TH]);
+        // RÚT 12 CÂU MCQ bám đề mẫu: B10 (2), B11 (3), B12 (3), B13 (4)
+        let mcq10 = shuffleArray(allMcqBank.filter(q => q.lesson === 10)).slice(0, 2);
+        let mcq11 = shuffleArray(allMcqBank.filter(q => q.lesson === 11)).slice(0, 3);
+        let mcq12 = shuffleArray(allMcqBank.filter(q => q.lesson === 12)).slice(0, 3);
+        let mcq13 = shuffleArray(allMcqBank.filter(q => q.lesson === 13)).slice(0, 4);
+
+        selectedMcq = shuffleArray([...mcq10, ...mcq11, ...mcq12, ...mcq13]);
 
         selectedMcq.forEach(q => {
             let optsWithStatus = q.options.map((text, idx) => ({ text: text, isCorrect: (idx === q.correct) }));
             optsWithStatus = shuffleArray(optsWithStatus);
             q.options = optsWithStatus.map(o => o.text);
-            q.correct = optsWithStatus.findIndex(o => o.isCorrect); 
+            q.correct = optsWithStatus.findIndex(o => o.isCorrect);
         });
 
-        // 2. RÚT ĐÚNG/SAI (T/F) - 4 CÂU (B10: 1, B11: 1, B12: 2)
-        let tf10 = shuffleArray(allTfBank.filter(q => q.lesson === 10))[0];
-        let tf11 = shuffleArray(allTfBank.filter(q => q.lesson === 11))[0];
-        let tf12_1 = shuffleArray(allTfBank.filter(q => q.lesson === 12))[0]; 
-        let tf12_2 = shuffleArray(allTfBank.filter(q => q.lesson === 12))[1]; 
-        
-        selectedTf = shuffleArray([tf10, tf11, tf12_1, tf12_2]);
+        // GIỮ NGUYÊN 4 CÂU ĐÚNG/SAI THEO ĐỀ MẪU
+        selectedTf = [...allTfBank];
 
-        // 3. RÚT TỰ LUẬN (ESSAY) - 3 CÂU
-        let es10 = shuffleArray(allEssayBank.filter(q => q.lesson === 10))[0];
-        let es11 = shuffleArray(allEssayBank.filter(q => q.lesson === 11))[0];
-        let es12 = shuffleArray(allEssayBank.filter(q => q.lesson === 12))[0];
-        
-        selectedEssay = [es10.text, es11.text, es12.text]; 
+        // GIỮ NGUYÊN 3 CÂU TỰ LUẬN THEO ĐỀ MẪU
+        selectedEssay = allEssayBank.map(q => q.text);
     }
 
-    // ==========================================
+// ==========================================
     // 3. GIAO DIỆN & HOẠT ĐỘNG
     // ==========================================
     let timeStart = new Date();
